@@ -1,0 +1,841 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Virat Kumar — API Powered Developer &amp; AI Automation Engineer</title>
+<meta name="description" content="Virat Kumar builds AI-powered software, intelligent automation systems, scalable SaaS products, and high-performance digital experiences."/>
+<meta property="og:title" content="Virat Kumar — API Powered Developer &amp; AI Automation Engineer"/>
+<meta property="og:description" content="Virat Kumar builds AI-powered software, intelligent automation systems, scalable SaaS products, and high-performance digital experiences."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&amp;family=Instrument+Serif:ital@1&amp;family=Inter:wght@400;500;600&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"/>
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{--ink:#111318;--porc:#F4F0E8;--white:#fff;--cobalt:#405CF5;--graph:#292D36;--slate:#8D929D;--slate-d:#5F646E;--line:#D8D4CC;--coral:#F36B4F;--grey:#E9E6DE;
+--display:"Space Grotesk",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif;--body:Inter,system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
+--ease:cubic-bezier(.2,.7,.2,1);--max:1280px;--pad:clamp(20px,4vw,48px)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--porc);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:600;letter-spacing:-.03em;line-height:.98;margin:0}
+h2{font-size:clamp(2.2rem,5vw,5rem)}
+h3{font-size:clamp(1.35rem,2.4vw,2.1rem);line-height:1.1}
+em.s{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+p{margin:0 0 1em}
+.mono{font:500 12px/1.4 var(--mono);text-transform:uppercase;letter-spacing:.08em}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:3px;border-radius:2px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:var(--cobalt);color:#fff;padding:0 16px;min-height:44px;display:inline-flex;align-items:center;font:500 13px var(--mono);text-decoration:none}
+.skip:focus{top:12px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.sec{padding:clamp(80px,11vw,160px) 0;position:relative}
+.sec--white{background:var(--white)}
+.idx{font:500 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--slate-d);display:flex;align-items:center;gap:10px}
+.idx::before{content:"";width:7px;height:7px;border:1px solid currentColor;border-radius:50%}
+.idx b{color:var(--cobalt);font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:0 24px}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 24px;background:var(--cobalt);color:#fff;text-decoration:none;font:500 15px var(--display);letter-spacing:.01em;border:1px solid var(--cobalt);border-radius:2px;cursor:pointer;transition:background .25s var(--ease),color .25s var(--ease),transform .25s var(--ease)}
+.btn:hover{background:#2F49DA;transform:translateY(-2px)}
+.btn--ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn--ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
+.tlink{display:inline-flex;align-items:center;min-height:44px;font:500 15px var(--display);text-decoration:none;border-bottom:1px solid currentColor;transition:color .2s var(--ease)}
+.tlink:hover{color:var(--cobalt)}
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:50;color:var(--porc);transition:background .3s var(--ease),color .3s var(--ease),border-color .3s var(--ease);border-bottom:1px solid transparent}
+.nav.is-solid{background:var(--porc);color:var(--ink);border-color:var(--line)}
+.nav__in{display:flex;align-items:center;justify-content:space-between;height:72px;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.wordmark{font:600 15px var(--display);letter-spacing:.14em;text-decoration:none;display:inline-flex;align-items:center;gap:10px;min-height:44px}
+.wordmark i{width:8px;height:8px;background:var(--cobalt);display:inline-block}
+.nav__links{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+.nav__links a{font:500 14px var(--body);text-decoration:none;position:relative;display:inline-flex;align-items:center;min-height:44px}
+.nav__links a::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:var(--cobalt);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
+.nav__links a:hover::after,.nav__links a.is-active::after{transform:scaleX(1)}
+.nav__cta{font:500 14px var(--display);text-decoration:none;border:1px solid currentColor;padding:0 16px;min-height:44px;display:inline-flex;align-items:center;border-radius:2px;transition:background .2s var(--ease),color .2s var(--ease)}
+.nav__cta:hover{background:var(--cobalt);border-color:var(--cobalt);color:#fff}
+.menu-btn{display:none;background:none;border:1px solid currentColor;color:inherit;font:500 12px var(--mono);letter-spacing:.1em;min-height:44px;min-width:44px;padding:0 14px;border-radius:2px;cursor:pointer}
+.overlay{position:fixed;inset:0;z-index:60;background:var(--ink);color:var(--porc);display:none;flex-direction:column;padding:20px var(--pad) 40px}
+.overlay.is-open{display:flex}
+.overlay__top{display:flex;justify-content:space-between;align-items:center;height:52px}
+.overlay ul{list-style:none;margin:auto 0 0;padding:0}
+.overlay li{border-top:1px solid var(--graph)}
+.overlay li a{display:flex;justify-content:space-between;align-items:center;min-height:64px;text-decoration:none;font:600 clamp(1.8rem,8vw,2.6rem) var(--display);letter-spacing:-.02em}
+.overlay li a span{font:500 12px var(--mono);color:var(--slate)}
+@media(max-width:900px){.nav__links,.nav__cta{display:none}.menu-btn{display:inline-flex;align-items:center}}
+/* hero */
+.hero{background:var(--ink);color:var(--porc);padding:140px 0 0;position:relative;overflow:hidden}
+.hero__meta{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--slate);margin-bottom:clamp(40px,6vw,72px)}
+.hero__meta span+span::before{content:"·";margin-right:18px;color:var(--cobalt)}
+.hero__grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:40px;align-items:end}
+.h1{font-size:clamp(3.5rem,8.3vw,8.5rem);line-height:.88;letter-spacing:-.045em;font-weight:700;margin-bottom:40px}
+.h1 span{display:block}
+.h1 .l1{font-size:.42em;letter-spacing:-.01em;font-weight:500;margin-bottom:.25em;color:var(--slate)}
+.h1 .l2{color:var(--cobalt);font-size:1.12em;margin-left:-.04em}
+.h1 .l3{padding-left:1.1em}
+.hero__role{font:500 13px/1.7 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--porc);max-width:46ch;margin-bottom:20px;padding-left:16px;border-left:1px solid var(--cobalt)}
+.hero__copy{max-width:56ch;color:#C9CCD3;font-size:clamp(16px,1.3vw,19px);margin-bottom:36px}
+.hero__acts{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
+.diagram{color:var(--porc);transition:transform .35s var(--ease)}
+.diagram .lyr rect{fill:none;stroke:#3A3F4A}
+.diagram .lyr text{fill:var(--slate);font:500 11px var(--mono);letter-spacing:.08em}
+.diagram .lyr .nm{fill:var(--porc);font:600 17px var(--display);letter-spacing:.06em}
+.diagram .lyr circle{fill:var(--ink);stroke:var(--porc);transition:fill .25s var(--ease),stroke .25s var(--ease)}
+.diagram .lyr{cursor:default;outline:none}
+.diagram .lyr:hover rect,.diagram .lyr:focus rect{stroke:var(--cobalt)}
+.diagram .lyr:hover circle,.diagram .lyr:focus circle{fill:var(--cobalt);stroke:var(--cobalt)}
+.diagram .lyr:focus-visible rect{stroke-width:2}
+.diagram .flow{fill:none;stroke:var(--cobalt);stroke-width:1.25}
+.diagram .br{fill:none;stroke:var(--porc);stroke-width:1}
+.diagram-m{display:none}
+.hero__foot{margin-top:clamp(56px,8vw,100px);border-top:1px solid var(--graph);display:grid;grid-template-columns:repeat(3,1fr)}
+.hero__foot p{margin:0;padding:22px 0;color:var(--slate)}
+.hero__foot p b{color:var(--porc);font-weight:500}
+@media(max-width:900px){.hero__grid{grid-template-columns:1fr}.diagram{display:none}.diagram-m{display:block;max-width:340px}.hero__foot{grid-template-columns:1fr}.hero__foot p{padding:14px 0;border-bottom:1px solid var(--graph)}}
+@media(max-width:400px){.h1{font-size:3.1rem}.h1 .l2{font-size:1.02em}}
+/* about */
+.about__h{grid-column:1/-1;margin:28px 0 clamp(48px,7vw,96px);max-width:14ch}
+.about__side{grid-column:1/5}
+.about__side .lead{font:500 clamp(1.2rem,1.8vw,1.5rem)/1.3 var(--display);letter-spacing:-.01em;margin:20px 0 40px;max-width:22ch}
+.about__body{grid-column:6/-1;max-width:65ch;font-size:clamp(16px,1.25vw,19px)}
+.about__body p:first-child{font:500 clamp(1.3rem,2vw,1.7rem)/1.35 var(--display);letter-spacing:-.015em}
+.about__body p:last-child{color:var(--graph);border-top:1px solid var(--line);padding-top:20px;margin-top:28px}
+.sysline{color:var(--ink)}
+.sysline path,.sysline line{fill:none;stroke:currentColor;stroke-width:1}
+.sysline text{font:500 10.5px var(--mono);letter-spacing:.08em;fill:var(--slate-d)}
+@media(max-width:900px){.about__side,.about__body{grid-column:1/-1}.about__side{order:2;margin-top:32px}}
+/* capabilities */
+.cap__head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 48px;align-items:end;margin:28px 0 clamp(48px,6vw,80px)}
+.cap__head h2{max-width:13ch}
+.cap__head p{color:var(--graph);max-width:44ch;margin:0}
+.cap{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:repeat(5,auto) 1fr;column-gap:clamp(32px,5vw,80px);border-top:1px solid var(--ink)}
+.cap__tab{grid-column:2;display:flex;align-items:center;gap:18px;width:100%;min-height:68px;padding:14px 0;background:none;border:0;border-bottom:1px solid var(--line);color:var(--ink);font:600 clamp(1rem,1.3vw,1.15rem) var(--display);letter-spacing:.02em;text-align:left;cursor:pointer;transition:color .25s var(--ease),padding .3s var(--ease)}
+.cap__tab .n{font:500 12px var(--mono);color:var(--slate-d);min-width:24px}
+.cap__tab .ar{margin-left:auto;font:400 18px var(--body);opacity:0;transform:translateX(-6px);transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.cap__tab:hover{color:var(--cobalt)}
+.cap__tab[aria-selected="true"]{color:var(--cobalt);padding-left:10px}
+.cap__tab[aria-selected="true"] .n{color:var(--cobalt)}
+.cap__tab[aria-selected="true"] .ar{opacity:1;transform:none}
+.cap__panel{grid-column:1;grid-row:1/-1;padding:36px 0 0}
+.cap__panel[hidden]{display:none}
+.cap__num{font:700 clamp(4rem,9vw,8rem)/.85 var(--display);letter-spacing:-.05em;color:var(--cobalt)}
+.cap__panel h3{margin:20px 0 16px;letter-spacing:-.01em}
+.cap__panel>p{color:var(--graph);max-width:48ch}
+.cap__body{display:grid;grid-template-columns:minmax(0,1fr) 160px;gap:32px;align-items:start;margin-top:32px}
+.svcs{list-style:none;margin:0;padding:0 0 0 22px;position:relative}
+.svcs::before{content:"";position:absolute;left:3px;top:10px;bottom:10px;width:1px;background:var(--ink)}
+.svcs li{position:relative;padding:7px 0;font:500 15px var(--body)}
+.svcs li::before{content:"";position:absolute;left:-22px;top:15px;width:7px;height:7px;background:var(--white);border:1px solid var(--ink);border-radius:50%}
+.svcs li:first-child::before{background:var(--cobalt);border-color:var(--cobalt)}
+.svcs li:last-child::before{background:var(--coral);border-color:var(--coral)}
+.cap__fig{color:var(--ink)}
+.cap__fig *{fill:none;stroke:currentColor;stroke-width:1}
+.cap__fig .c{stroke:var(--cobalt)}
+.cap__fig .f{fill:var(--cobalt);stroke:none}
+@media(max-width:900px){.cap__head{grid-template-columns:1fr}.cap{grid-template-columns:1fr;grid-template-rows:none}.cap__tab,.cap__panel{grid-column:1;grid-row:auto!important}.cap__panel{padding:8px 0 32px;border-bottom:1px solid var(--line)}.cap__num{display:none}.cap__panel h3{display:none}.cap__body{grid-template-columns:1fr}.cap__fig{display:none}}
+/* shared phase 2 */
+.sec--line{border-top:1px solid var(--line)}
+.shead{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 48px;align-items:end;margin:28px 0 clamp(48px,6vw,88px)}
+.shead p{color:var(--graph);max-width:46ch;margin:0}
+.anno{font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--slate-d)}
+@media(max-width:900px){.shead{grid-template-columns:1fr}}
+/* 03 expertise */
+.ex{--gx:clamp(32px,5vw,80px);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:var(--gx);border-top:1px solid var(--ink)}
+.ex__aside{padding-top:36px}
+.ex__stick{position:sticky;top:110px}
+.ex__state{font:700 clamp(2.6rem,5.4vw,5.2rem)/.92 var(--display);letter-spacing:-.045em;margin:0 0 36px}
+.ex__state em{color:var(--cobalt)}
+.ex__read{display:none;position:relative;border:1px solid var(--line);background:var(--white);padding:28px 28px 24px}
+.js .ex__read{display:block}
+.ex__read::before,.ex__read::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--ink)}
+.ex__read::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.ex__read::after{bottom:-1px;right:-1px;border-left:0;border-top:0;border-color:var(--cobalt)}
+.ex__rn{font:700 clamp(3rem,5vw,4.5rem)/.85 var(--display);letter-spacing:-.05em;color:var(--cobalt);margin:14px 0 18px}
+.ex__read h3{margin:0 0 12px}
+.ex__read .ex__rd{color:var(--graph);max-width:40ch;min-height:3.2em}
+.ex__map{margin-top:20px;max-width:300px}
+.ex__map path{fill:none;stroke:var(--line)}
+.ex__map circle{fill:var(--white);stroke:var(--ink);transition:fill .25s var(--ease),stroke .25s var(--ease)}
+.ex__map circle.on{fill:var(--cobalt);stroke:var(--cobalt)}
+.ex__list{list-style:none;margin:0;padding:0}
+.ex__item{position:relative;border-bottom:1px solid var(--line)}
+.ex__btn{position:relative;display:flex;align-items:center;gap:18px;width:100%;min-height:58px;padding:10px 0;background:none;border:0;color:var(--ink);font:600 clamp(1.05rem,1.5vw,1.3rem) var(--display);letter-spacing:-.005em;text-align:left;cursor:pointer;transition:color .25s var(--ease),padding .3s var(--ease)}
+.ex__btn .n{font:500 12px var(--mono);color:var(--slate-d);min-width:24px;letter-spacing:.06em}
+.ex__btn .ar{margin-left:auto;font:400 18px var(--body);opacity:0;transition:opacity .25s var(--ease),transform .25s var(--ease)}
+.ex__btn:hover{color:var(--cobalt)}
+.ex__item.is-open .ex__btn{color:var(--cobalt);padding-left:10px}
+.ex__item.is-open .ex__btn .n{color:var(--cobalt)}
+.ex__item.is-open .ex__btn .ar{opacity:1}
+.ex__d{margin:0;padding:0 0 18px 42px;color:var(--graph);max-width:52ch}
+@media(min-width:901px){
+  .js .ex__d{display:none}
+  .ex__item.is-open::before{content:"";position:absolute;right:100%;top:29px;width:var(--gx);height:1px;background:var(--cobalt)}
+  .ex__item.is-open::after{content:"";position:absolute;left:calc(-1 * var(--gx) - 4px);top:25px;width:9px;height:9px;border-radius:50%;background:var(--cobalt)}
+}
+@media(max-width:900px){.ex{grid-template-columns:1fr}.ex__stick{position:static}.ex__state{margin-bottom:24px}.js .ex__read{display:none}.ex__list{border-top:1px solid var(--line)}.js .ex__item:not(.is-open) .ex__d{display:none}.ex__btn .ar{opacity:1;transition:transform .25s var(--ease)}.ex__item.is-open .ex__btn .ar{transform:rotate(90deg)}}
+/* 04 approach */
+.ap__top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:28px 0 clamp(56px,7vw,96px)}
+.ap__top h2{max-width:12ch}
+.ap{position:relative}
+.ap__svg{width:100%;height:auto;margin-bottom:28px;overflow:visible}
+.ap__svg .cn{fill:none;stroke:var(--line);stroke-dasharray:2 6}
+.ap__svg .pt{fill:none;stroke:var(--ink);stroke-width:1.25}
+.ap__svg .nd{fill:var(--porc);stroke:var(--ink)}
+.ap__svg .nd.c{fill:var(--cobalt);stroke:var(--cobalt)}
+.ap__svg text{font:500 12px var(--mono);letter-spacing:.1em;fill:var(--slate-d)}
+.ap__v{display:none}
+.ap__st{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));list-style:none;margin:0;padding:0}
+.ap__st li{position:relative;padding-right:32px}
+.ap__st .n{display:block;color:var(--cobalt);margin-bottom:14px}
+.ap__st h3{margin:0 0 14px;letter-spacing:-.01em}
+.ap__st p{color:var(--graph);max-width:30ch;margin:0}
+@media(max-width:900px){
+  .ap__top{flex-direction:column;align-items:flex-start}
+  .ap__svg{display:none}
+  .ap__v{display:block;position:absolute;left:0;top:0;width:24px;height:100%}
+  .ap__v path{fill:none;stroke:var(--ink);stroke-width:1.25}
+  .ap__st{grid-template-columns:1fr;padding-left:52px;gap:44px}
+  .ap__st li{padding-right:0}
+  .ap__st li::before{content:"";position:absolute;left:-45px;top:2px;width:11px;height:11px;border-radius:50%;background:var(--porc);border:1px solid var(--ink)}
+  .ap__st li:first-child::before{background:var(--cobalt);border-color:var(--cobalt)}
+  .ap__st li:last-child::before{background:var(--coral);border-color:var(--coral)}
+}
+/* 05 journey */
+.jr{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);column-gap:clamp(32px,5vw,80px)}
+.jr__stick{position:sticky;top:110px;align-self:start;padding-top:8px}
+.jr__label{font:700 clamp(1.8rem,3.6vw,3.4rem)/1 var(--display);letter-spacing:-.035em;text-transform:uppercase;margin:16px 0 28px;display:flex;align-items:baseline;gap:.4em;flex-wrap:wrap}
+.jr__label b{color:var(--cobalt);font-weight:700}
+.jr__track{position:relative;height:16px;max-width:360px;border-bottom:1px solid var(--ink)}
+.jr__track i{position:absolute;bottom:-4px;width:7px;height:7px;border:1px solid var(--ink);border-radius:50%;background:var(--white);transform:translateX(-50%)}
+.jr__mk{position:absolute;bottom:-6px;left:calc(var(--i,0) * 25%);width:11px;height:11px;background:var(--cobalt);transform:translateX(-50%);transition:left .45s var(--ease)}
+.jr__st{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+.jr__st li{position:relative;padding:0 0 0 36px;min-height:34vh;display:flex;flex-direction:column;justify-content:flex-start}
+.jr__st li:last-child{min-height:0}
+.jr__st li::before{content:"";position:absolute;left:-5px;top:4px;width:9px;height:9px;border-radius:50%;background:var(--white);border:1px solid var(--slate-d);transition:background .3s var(--ease),border-color .3s var(--ease)}
+.jr__st .n{color:var(--slate-d);margin-bottom:10px}
+.jr__st h3{color:var(--slate-d);margin:0 0 12px;transition:color .3s var(--ease)}
+.jr__st p{color:var(--graph);max-width:40ch;margin:0}
+.jr__st li.is-on::before{background:var(--cobalt);border-color:var(--cobalt)}
+.jr__st li.is-on h3,.jr__st li.is-on .n{color:var(--ink)}
+.jr__st li:last-child::after{content:"";position:absolute;left:-5px;bottom:-12px;width:9px;height:9px;background:var(--coral);border-radius:50%}
+@media(max-width:900px){.jr{grid-template-columns:1fr}.jr__stick{top:72px;z-index:2;background:var(--white);padding:14px 0 18px;margin-bottom:32px;border-bottom:1px solid var(--line)}.jr__label{margin:8px 0 14px;font-size:1.7rem}.jr__st li{min-height:0;padding-bottom:48px}}
+/* 06 work */
+.wk{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px clamp(32px,5vw,80px);align-items:start}
+.wk__rows{list-style:none;margin:0 0 48px;padding:0;border-top:1px solid var(--ink)}
+.wk__rows li{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:76px;border-bottom:1px solid var(--line)}
+.wk__rows .c{font:600 clamp(1.4rem,2.2vw,1.9rem) var(--display);letter-spacing:-.02em}
+.wk__rows .s{display:inline-flex;align-items:center;gap:8px;color:var(--slate-d)}
+.wk__rows .s::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cobalt)}
+.wk__rows li:last-child .s::before{background:transparent;border:1px solid var(--slate-d)}
+.wk__studies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
+.wk__studies figure{margin:0}
+.wk__studies svg{width:100%;height:auto;background:var(--grey);border-radius:2px}
+.wk__studies svg *{fill:none;stroke:var(--ink);stroke-width:1}
+.wk__studies svg .c{stroke:var(--cobalt)}
+.wk__studies svg .f{fill:var(--cobalt);stroke:none}
+.wk__studies figcaption{margin-top:10px;font:500 12px/1.45 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--slate-d)}
+.wk__fig{margin:0;position:relative;border:1px solid var(--line);background:var(--white);padding:clamp(12px,1.6vw,20px)}
+.wk__fig::before,.wk__fig::after{content:"";position:absolute;width:16px;height:16px;border:1px solid var(--ink)}
+.wk__fig::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.wk__fig::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.wk__fig svg{width:100%;height:auto}
+.wk__fig .g{fill:none;stroke:var(--line)}
+.wk__fig .k{fill:none;stroke:var(--ink);stroke-width:1}
+.wk__fig .c{fill:none;stroke:var(--cobalt);stroke-width:1.5}
+.wk__fig text{font:500 13px var(--mono);letter-spacing:.12em;fill:var(--ink)}
+.wk__fig text.sm{font-size:11px;fill:var(--slate-d)}
+.wk__fig figcaption{display:flex;justify-content:space-between;gap:12px;padding-top:12px}
+@media(max-width:900px){.wk{grid-template-columns:1fr}.wk__fig{order:-1}.wk__rows{margin-bottom:36px}}
+@media(max-width:480px){.wk__studies{grid-template-columns:repeat(2,minmax(0,1fr))}.wk__studies figure:last-child{display:none}}
+/* current focus */
+.focus{background:var(--cobalt);color:var(--white);padding:clamp(88px,12vw,180px) 0}
+.focus .idx{color:var(--white)}
+.focus .idx b{color:var(--white)}
+.focus h2{font-size:clamp(2.6rem,7.2vw,7rem);letter-spacing:-.045em;line-height:.92;max-width:13ch;margin:32px 0 clamp(48px,6vw,80px)}
+.focus__row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px 48px;align-items:end}
+.focus__row p{font-size:clamp(17px,1.5vw,21px);max-width:40ch;margin:0}
+.focus__line svg{width:100%;height:24px}
+.focus__line path{fill:none;stroke:var(--white);stroke-width:1}
+.focus__lbl{display:flex;justify-content:space-between;gap:12px;margin-top:10px;color:rgba(255,255,255,.9)}
+.focus__lbl span{display:inline-flex;align-items:center;gap:8px}
+.focus__lbl span::before{content:"";width:7px;height:7px;border:1px solid currentColor;border-radius:50%}
+.focus__lbl span:last-child::before{background:var(--coral);border-color:var(--coral)}
+@media(max-width:900px){.focus__row{grid-template-columns:1fr}.focus__line{order:2}}
+/* 07 faq */
+.fq__top{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin:28px 0 clamp(48px,6vw,80px)}
+.fq__top h2{max-width:11ch}
+.fq{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.fq li{border-bottom:1px solid var(--line)}
+.fq__q{display:grid;grid-template-columns:clamp(48px,8vw,120px) minmax(0,1fr) 28px;align-items:center;gap:12px;width:100%;min-height:80px;padding:18px 0;background:none;border:0;color:var(--ink);font:600 clamp(1.1rem,1.9vw,1.6rem)/1.25 var(--display);letter-spacing:-.015em;text-align:left;cursor:pointer;transition:color .25s var(--ease)}
+.fq__q .n{font:500 12px var(--mono);letter-spacing:.08em;color:var(--slate-d)}
+.fq__q .pl{position:relative;width:16px;height:16px;justify-self:end}
+.fq__q .pl::before,.fq__q .pl::after{content:"";position:absolute;left:0;top:7.5px;width:16px;height:1px;background:currentColor;transition:transform .3s var(--ease)}
+.fq__q .pl::after{transform:rotate(90deg)}
+.fq__q[aria-expanded="true"] .pl::after{transform:rotate(0)}
+.fq__q:hover,.fq__q[aria-expanded="true"]{color:var(--cobalt)}
+.fq__q[aria-expanded="true"] .n{color:var(--cobalt)}
+.fq__a{padding:0 40px 28px calc(clamp(48px,8vw,120px) + 12px);color:var(--graph);max-width:calc(62ch + 132px)}
+.fq__a p{margin:0}
+.fq__a a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);text-decoration-color:var(--cobalt);text-underline-offset:3px}
+.fq__a a:hover{color:var(--cobalt)}
+@media(max-width:600px){.fq__top{flex-direction:column;align-items:flex-start}.fq__q{grid-template-columns:36px minmax(0,1fr) 20px}.fq__a{padding:0 0 24px 48px}}
+/* contact + footer */
+.finale{background:var(--ink);color:var(--porc);padding:clamp(80px,11vw,160px) 0 0}
+.finale .idx{color:var(--slate)}
+.ct{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:56px clamp(40px,6vw,96px);margin-top:28px}
+.ct h2{max-width:11ch;margin-bottom:28px}
+.ct__lead{color:#C9CCD3;font-size:clamp(17px,1.4vw,19px);max-width:40ch;margin-bottom:40px}
+.ct__acts{display:flex;flex-wrap:wrap;gap:14px}
+.ct__acts .btn{font-size:13px;letter-spacing:.08em}
+.ct__panel{border:1px solid var(--graph);position:relative;padding:clamp(24px,3vw,40px)}
+.ct__panel::before,.ct__panel::after{content:"";position:absolute;width:14px;height:14px;border:1px solid var(--cobalt)}
+.ct__panel::before{top:-1px;left:-1px;border-right:0;border-bottom:0}
+.ct__panel::after{bottom:-1px;right:-1px;border-left:0;border-top:0}
+.ch{display:grid;grid-template-columns:110px 1fr;gap:4px 16px;padding:16px 0;border-bottom:1px solid var(--graph);align-items:center}
+.ch:first-child{padding-top:0}
+.ch .mono{color:var(--slate)}
+.ch a{font:500 clamp(15px,1.4vw,18px) var(--display);text-decoration:none;word-break:break-all;min-height:44px;display:inline-flex;align-items:center}
+.ch a:hover{color:var(--cobalt)}
+.copy{grid-column:2;justify-self:start;background:none;border:1px solid var(--graph);color:var(--porc);font:500 12px var(--mono);letter-spacing:.1em;text-transform:uppercase;min-height:44px;padding:0 14px;border-radius:2px;cursor:pointer;transition:border-color .2s var(--ease)}
+.copy:hover{border-color:var(--cobalt)}
+.copy-st{grid-column:2;font:500 12px var(--mono);color:var(--slate);min-height:1em}
+.form{margin-top:28px;display:grid;gap:18px}
+.fld label{display:block;margin-bottom:6px;color:var(--slate)}
+.fld input,.fld textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--slate-d);color:var(--porc);font:400 17px var(--body);padding:10px 0;border-radius:0;transition:border-color .2s var(--ease)}
+.fld textarea{min-height:110px;resize:vertical}
+.fld input:focus,.fld textarea:focus{outline:none;border-bottom:2px solid var(--cobalt)}
+.fld .err{font:500 12px var(--mono);color:var(--coral);margin:6px 0 0;min-height:0}
+.fld [aria-invalid="true"]{border-bottom-color:var(--coral)}
+.form .btn{justify-self:start}
+.form-st{font:500 12px var(--mono);color:var(--slate);margin:0}
+.foot{margin-top:clamp(80px,10vw,140px);border-top:1px solid var(--graph);padding:40px 0 48px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr) minmax(0,3fr);gap:28px}
+.foot .wordmark{min-height:44px}
+.finale .idx b{color:#8A9CFF}
+.foot p{margin:12px 0 0;color:var(--slate);font-size:14px;max-width:40ch}
+.foot ul{list-style:none;margin:0;padding:0}
+.foot li a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;font-size:15px}
+.foot li a:hover{color:var(--cobalt)}
+.foot__end{display:flex;flex-direction:column;justify-content:space-between;gap:20px}
+.foot__end .mono{color:var(--slate);font-size:12px}
+@media(max-width:900px){.ct,.foot{grid-template-columns:1fr}.ch{grid-template-columns:1fr}.copy,.copy-st{grid-column:1}}
+/* motion */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.js .rv.in{opacity:1;transform:none}
+.js .draw{stroke-dasharray:var(--len,1000);stroke-dashoffset:var(--len,1000);transition:stroke-dashoffset 1.8s var(--ease)}
+.js .draw.in{stroke-dashoffset:0}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}.js .rv{opacity:1;transform:none}.js .draw{stroke-dashoffset:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__in">
+    <a class="wordmark" href="#top"><i aria-hidden="true"></i>VIRAT KUMAR</a>
+    <nav aria-label="Primary">
+      <ul class="nav__links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#capabilities">Capabilities</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#approach">Approach</a></li>
+        <li><a href="#journey">Journey</a></li>
+      </ul>
+    </nav>
+    <a class="nav__cta" href="#contact">Let&#39;s Talk ↗</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="overlay">MENU</button>
+  </div>
+</header>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menu">
+  <div class="overlay__top">
+    <span class="wordmark"><i aria-hidden="true"></i>VIRAT KUMAR</span>
+    <button class="menu-btn" id="menuClose" style="display:inline-flex">CLOSE</button>
+  </div>
+  <ul>
+    <li><a href="#about">About <span>01</span></a></li>
+    <li><a href="#capabilities">Capabilities <span>02</span></a></li>
+    <li><a href="#expertise">Expertise <span>03</span></a></li>
+    <li><a href="#approach">Approach <span>04</span></a></li>
+    <li><a href="#journey">Journey <span>05</span></a></li>
+    <li><a href="#contact">Let&#39;s Talk <span>↗</span></a></li>
+  </ul>
+</div>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="hero__meta mono rv"><span>Independent Developer</span><span>AI / Automation / Software</span><span>India</span></p>
+    <div class="hero__grid">
+      <div>
+        <h1 class="h1 rv"><span class="l1">I BUILD</span><span class="l2">INTELLIGENT</span><span class="l3">DIGITAL</span><span class="l4">SYSTEMS.</span></h1>
+        <p class="hero__role rv">API Powered Developer · Startup Founder · Full Stack Developer · AI Automation Engineer</p>
+        <p class="hero__copy rv">I build modern AI-powered software, intelligent automation systems, scalable SaaS products, and high-performance digital experiences—from interfaces and APIs to backend systems and deployment.</p>
+        <div class="hero__acts rv">
+          <a class="btn" href="#contact">Let&#39;s Build Something Amazing ↗</a>
+          <a class="tlink" href="#capabilities">Explore My Capabilities ↓</a>
+        </div>
+      </div>
+      <svg class="diagram" id="diagram" viewBox="0 0 460 560" role="group" aria-label="System architecture: Interface, API, Logic, Data, Automation">
+        <path class="br" d="M8 28V8h20M432 8h20v20M452 532v20h-20M28 552H8v-20"></path>
+        <text x="30" y="30" fill="#8D929D" style="font:500 10px &#39;IBM Plex Mono&#39;,monospace;letter-spacing:.1em">FIG.00 — SYSTEM LINE</text>
+        <path class="flow draw" d="M70 92V170H150V268H110V366H190V464H130V512" style="--len:700"></path>
+        <g class="lyr" tabindex="0" aria-label="Layer 1: Interface"><rect x="40" y="60" width="300" height="64" rx="2"></rect><circle cx="70" cy="92" r="5"></circle><text class="nm" x="92" y="98">INTERFACE</text><text x="270" y="80">L/01</text></g>
+        <g class="lyr" tabindex="0" aria-label="Layer 2: API"><rect x="120" y="148" width="300" height="64" rx="2"></rect><circle cx="150" cy="180" r="5"></circle><text class="nm" x="172" y="186">API</text><text x="350" y="168">L/02</text></g>
+        <g class="lyr" tabindex="0" aria-label="Layer 3: Logic"><rect x="80" y="246" width="260" height="64" rx="2"></rect><circle cx="110" cy="278" r="5"></circle><text class="nm" x="132" y="284">LOGIC</text><text x="270" y="266">L/03</text></g>
+        <g class="lyr" tabindex="0" aria-label="Layer 4: Data"><rect x="160" y="344" width="260" height="64" rx="2"></rect><circle cx="190" cy="376" r="5"></circle><text class="nm" x="212" y="382">DATA</text><text x="350" y="364">L/04</text></g>
+        <g class="lyr" tabindex="0" aria-label="Layer 5: Automation"><rect x="100" y="442" width="300" height="64" rx="2"></rect><circle cx="130" cy="474" r="5"></circle><text class="nm" x="152" y="480">AUTOMATION</text><text x="330" y="462">L/05</text></g>
+        <circle cx="130" cy="524" r="4" fill="#F36B4F"></circle>
+        <text x="142" y="528" fill="#8D929D" style="font:500 10px &#39;IBM Plex Mono&#39;,monospace;letter-spacing:.1em">DEPLOY →</text>
+      </svg>
+      <svg class="diagram-m" viewBox="0 0 320 210" aria-hidden="true">
+        <g fill="none" stroke="#405CF5"><path d="M14 16V196"></path></g>
+        <g font-family="IBM Plex Mono,monospace" font-size="12" letter-spacing="1" fill="#F4F0E8">
+          <circle cx="14" cy="16" r="5" fill="#111318" stroke="#F4F0E8"></circle><text x="34" y="20">INTERFACE</text>
+          <circle cx="14" cy="61" r="5" fill="#111318" stroke="#F4F0E8"></circle><text x="34" y="65">API</text>
+          <circle cx="14" cy="106" r="5" fill="#111318" stroke="#F4F0E8"></circle><text x="34" y="110">LOGIC</text>
+          <circle cx="14" cy="151" r="5" fill="#111318" stroke="#F4F0E8"></circle><text x="34" y="155">DATA</text>
+          <circle cx="14" cy="196" r="5" fill="#F36B4F"></circle><text x="34" y="200">AUTOMATION</text>
+        </g>
+      </svg>
+    </div>
+    <div class="hero__foot mono">
+      <p><b>01</b> / DIGITAL PRODUCTS</p><p><b>02</b> / AI &amp; AUTOMATION</p><p><b>03</b> / FULL STACK SYSTEMS</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="about" aria-labelledby="about-h">
+  <div class="wrap grid">
+    <p class="idx rv" style="grid-column:1/-1"><span><b>01</b> / About</span></p>
+    <h2 class="about__h rv" id="about-h">Technical thinking. <em class="s">Product-minded</em> execution.</h2>
+    <aside class="about__side rv">
+      <p class="mono" style="color:var(--slate-d)">Scope</p>
+      <p class="lead">Complete solutions, from first interface to final deployment.</p>
+      <svg class="sysline" viewBox="0 0 300 120" aria-hidden="true">
+        <path d="M1 1h12M1 1v12M299 119h-12M299 119v-12"></path>
+        <path class="draw" d="M30 60H270" style="--len:240"></path>
+        <circle cx="30" cy="60" r="5" fill="#405CF5" stroke="none"></circle>
+        <circle cx="150" cy="60" r="5" fill="#F4F0E8" stroke="#111318"></circle>
+        <circle cx="270" cy="60" r="5" fill="#F36B4F" stroke="none"></circle>
+        <text x="30" y="88" text-anchor="middle">DESIGN</text><text x="150" y="88" text-anchor="middle">BUILD</text><text x="270" y="88" text-anchor="middle">SHIP</text>
+        <text x="90" y="52" text-anchor="middle">→</text><text x="210" y="52" text-anchor="middle">→</text>
+      </svg>
+    </aside>
+    <div class="about__body rv">
+      <p>I build modern AI-powered software, intelligent automation systems, scalable SaaS products, premium web applications, and high-performance digital experiences.</p>
+      <p>From UI/UX design to frontend, backend, APIs, databases, cloud integrations, AI agents, and production deployment, I build complete solutions according to business requirements.</p>
+      <p>I use modern AI-assisted development workflows to deliver faster development, higher quality, cleaner architecture, and exceptional user experience without compromising engineering standards.</p>
+      <p>Although I am currently 16 years old, my focus is on building production-quality software, continuously improving my skills, and creating real-world products.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--white" id="capabilities" aria-labelledby="cap-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>02</b> / Capabilities</span></p>
+    <div class="cap__head">
+      <h2 class="rv" id="cap-h">From interfaces to <em class="s">intelligent</em> systems.</h2>
+      <p class="rv">I build complete digital solutions around real requirements, combining frontend experiences, backend systems, APIs, AI integrations, and automation.</p>
+    </div>
+    <div class="cap rv" role="tablist" aria-label="Capability domains" aria-orientation="vertical">
+      <button class="cap__tab" role="tab" id="t1" aria-controls="p1" aria-selected="true" style="grid-row:1"><span class="n">01</span>AI &amp; INTELLIGENT AUTOMATION<span class="ar" aria-hidden="true">→</span></button>
+      <div class="cap__panel" role="tabpanel" id="p1" aria-labelledby="t1" tabindex="0">
+        <p class="cap__num" aria-hidden="true">01</p>
+        <h3>AI &amp; Intelligent Automation</h3>
+        <p>Intelligent workflows, AI-enabled features, conversational interfaces, and automated processes designed around practical requirements.</p>
+        <div class="cap__body">
+          <ul class="svcs"><li>AI Automation</li><li>AI Agents</li><li>AI Chatbots</li><li>AI Integration</li><li>Workflow Automation</li><li>Business Automation</li></ul>
+          <svg class="cap__fig" viewBox="0 0 160 160" aria-hidden="true"><circle cx="80" cy="80" r="56"></circle><circle cx="80" cy="80" r="28" class="c"></circle><path d="M80 24v28M80 108v28M24 80h28M108 80h28"></path><circle cx="80" cy="80" r="5" class="f"></circle><path d="M4 16V4h12M156 144v12h-12"></path></svg>
+        </div>
+      </div>
+      <button class="cap__tab" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1" style="grid-row:2"><span class="n">02</span>SOFTWARE &amp; DIGITAL PRODUCTS<span class="ar" aria-hidden="true">→</span></button>
+      <div class="cap__panel" role="tabpanel" id="p2" aria-labelledby="t2" tabindex="0" hidden="">
+        <p class="cap__num" aria-hidden="true">02</p>
+        <h3>Software &amp; Digital Products</h3>
+        <p>Complete application experiences spanning interface design, implementation, server-side logic, and product functionality.</p>
+        <div class="cap__body">
+          <ul class="svcs"><li>SaaS Development</li><li>Full Stack Development</li><li>Frontend Development</li><li>Backend Development</li><li>Website Development</li><li>Web Applications</li><li>Mobile App Development</li><li>Custom Software Solutions</li></ul>
+          <svg class="cap__fig" viewBox="0 0 160 160" aria-hidden="true"><rect x="20" y="28" width="96" height="72" rx="2"></rect><rect x="44" y="60" width="96" height="72" rx="2" class="c"></rect><path d="M44 76h96"></path><circle cx="54" cy="68" r="3" class="f"></circle><path d="M4 16V4h12M156 144v12h-12"></path></svg>
+        </div>
+      </div>
+      <button class="cap__tab" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1" style="grid-row:3"><span class="n">03</span>APIS &amp; SYSTEMS<span class="ar" aria-hidden="true">→</span></button>
+      <div class="cap__panel" role="tabpanel" id="p3" aria-labelledby="t3" tabindex="0" hidden="">
+        <p class="cap__num" aria-hidden="true">03</p>
+        <h3>APIs &amp; Systems</h3>
+        <p>Connected systems, data flows, integrations, identity management, and deployment infrastructure.</p>
+        <div class="cap__body">
+          <ul class="svcs"><li>API Development</li><li>API Integration</li><li>Database Architecture</li><li>Authentication Systems</li><li>Cloud Deployment</li></ul>
+          <svg class="cap__fig" viewBox="0 0 160 160" aria-hidden="true"><circle cx="32" cy="40" r="10"></circle><circle cx="128" cy="40" r="10"></circle><circle cx="32" cy="120" r="10"></circle><circle cx="128" cy="120" r="10"></circle><rect x="64" y="64" width="32" height="32" class="c"></rect><path d="M40 47l24 22M120 47L96 69M40 113l24-22M120 113L96 91"></path><path d="M4 16V4h12M156 144v12h-12"></path></svg>
+        </div>
+      </div>
+      <button class="cap__tab" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1" style="grid-row:4"><span class="n">04</span>INTERFACES &amp; PLATFORMS<span class="ar" aria-hidden="true">→</span></button>
+      <div class="cap__panel" role="tabpanel" id="p4" aria-labelledby="t4" tabindex="0" hidden="">
+        <p class="cap__num" aria-hidden="true">04</p>
+        <h3>Interfaces &amp; Platforms</h3>
+        <p>Carefully considered interfaces, responsive web experiences, content platforms, and application control surfaces.</p>
+        <div class="cap__body">
+          <ul class="svcs"><li>UI/UX Design</li><li>Landing Pages</li><li>Dashboard Development</li><li>Admin Panels</li><li>CMS Development</li><li>Modern Web Experiences</li></ul>
+          <svg class="cap__fig" viewBox="0 0 160 160" aria-hidden="true"><rect x="16" y="24" width="128" height="112" rx="2"></rect><path d="M16 48h128M56 48v88"></path><path d="M72 64h56M72 80h40" class="c"></path><rect x="72" y="96" width="56" height="28"></rect><path d="M4 16V4h12M156 144v12h-12"></path></svg>
+        </div>
+      </div>
+      <button class="cap__tab" role="tab" id="t5" aria-controls="p5" aria-selected="false" tabindex="-1" style="grid-row:5"><span class="n">05</span>OPTIMIZATION<span class="ar" aria-hidden="true">→</span></button>
+      <div class="cap__panel" role="tabpanel" id="p5" aria-labelledby="t5" tabindex="0" hidden="">
+        <p class="cap__num" aria-hidden="true">05</p>
+        <h3>Optimization</h3>
+        <p>Improving performance, technical quality, discoverability, and the overall experience of a digital product.</p>
+        <div class="cap__body">
+          <ul class="svcs"><li>Performance Optimization</li><li>SEO Optimization</li></ul>
+          <svg class="cap__fig" viewBox="0 0 160 160" aria-hidden="true"><path d="M20 136h124M20 136V20"></path><path d="M28 120l28-20 24 8 28-36 28-40" class="c"></path><circle cx="136" cy="32" r="4" class="f"></circle><path d="M4 16V4h12M156 144v12h-12"></path></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="expertise" aria-labelledby="ex-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>03</b> / Expertise</span></p>
+    <div class="shead">
+      <h2 class="rv" id="ex-h">Choose the right tools. Build the <em class="s">right</em> solution.</h2>
+      <p class="rv">I choose the most suitable technologies, architecture, and tools according to project requirements rather than forcing every solution into the same stack.</p>
+    </div>
+    <div class="ex rv">
+      <div class="ex__aside">
+        <div class="ex__stick">
+          <p class="ex__state">Adaptive by <em class="s">design.</em></p>
+          <div class="ex__read" aria-live="polite">
+            <p class="anno">Selected area · Map 03</p>
+            <p class="ex__rn" id="exN">01</p>
+            <h3 id="exT">Frontend</h3>
+            <p class="ex__rd" id="exD">Interfaces, responsive layouts, component architecture.</p>
+            <svg class="ex__map" id="exMap" viewBox="0 0 300 120">
+              <path d="M20 20H280V60H20V100H150"></path>
+              <circle cx="20" cy="20" r="5" class="on"></circle><circle cx="85" cy="20" r="5"></circle><circle cx="150" cy="20" r="5"></circle><circle cx="215" cy="20" r="5"></circle><circle cx="280" cy="20" r="5"></circle>
+              <circle cx="280" cy="60" r="5"></circle><circle cx="215" cy="60" r="5"></circle><circle cx="150" cy="60" r="5"></circle><circle cx="85" cy="60" r="5"></circle><circle cx="20" cy="60" r="5"></circle>
+              <circle cx="20" cy="100" r="5"></circle><circle cx="85" cy="100" r="5"></circle><circle cx="150" cy="100" r="5"></circle>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <ol class="ex__list">
+        <li class="ex__item is-open"><button class="ex__btn" type="button" aria-expanded="true" aria-controls="ed1"><span class="n">01</span>Frontend<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed1">Interfaces, responsive layouts, component architecture.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed2"><span class="n">02</span>Backend<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed2">Application logic, services, validation, and system integration.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed3"><span class="n">03</span>Mobile<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed3">Cross-platform and mobile-first application experiences.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed4"><span class="n">04</span>AI<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed4">AI-powered features, language models, and intelligent application workflows.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed5"><span class="n">05</span>Automation<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed5">Trigger-based processes, tool integration, and workflow orchestration.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed6"><span class="n">06</span>Cloud<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed6">Hosting, deployment targets, and managed services.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed7"><span class="n">07</span>Database<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed7">Structured data, persistence, and application data modelling.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed8"><span class="n">08</span>Authentication<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed8">Sign-in flows, sessions, and access control.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed9"><span class="n">09</span>DevOps<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed9">Builds, environments, and release pipelines.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed10"><span class="n">10</span>Performance<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed10">Load speed, efficient rendering, and Core Web Vitals.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed11"><span class="n">11</span>Design<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed11">UI/UX, layout systems, and visual hierarchy.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed12"><span class="n">12</span>APIs<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed12">Designing, consuming, and connecting services.</p></li>
+        <li class="ex__item"><button class="ex__btn" type="button" aria-expanded="false" aria-controls="ed13"><span class="n">13</span>Modern AI Tools<span class="ar" aria-hidden="true">→</span></button><p class="ex__d" id="ed13">AI-assisted development workflows for faster, cleaner builds.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--line" id="approach" aria-labelledby="ap-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>04</b> / Approach</span></p>
+    <div class="ap__top">
+      <h2 class="rv" id="ap-h">Good software is more than <em class="s">code.</em></h2>
+      <p class="anno rv">FIG.04 — Blueprint · 4 stages, one line</p>
+    </div>
+    <div class="ap">
+      <svg class="ap__svg" viewBox="0 0 1200 140" aria-hidden="true">
+        <path class="cn" d="M0 70H1200"></path>
+        <path class="pt draw" pathLength="1" style="--len:1" d="M12 70H220V30H520V110H820V70H1188"></path>
+        <path class="pt" d="M1178 64L1188 70L1178 76"></path>
+        <circle class="nd c" cx="12" cy="70" r="6"></circle><circle class="nd" cx="312" cy="30" r="6"></circle><circle class="nd" cx="612" cy="110" r="6"></circle><circle class="nd" cx="912" cy="70" r="6"></circle>
+        <circle cx="1188" cy="70" r="3" fill="#F36B4F"></circle>
+        <text x="12" y="100">S/01</text><text x="312" y="16">S/02</text><text x="612" y="136">S/03</text><text x="912" y="100">S/04</text><text x="1188" y="100" text-anchor="end">DELIVERED</text>
+      </svg>
+      <svg class="ap__v" viewBox="0 0 24 1000" preserveAspectRatio="none" aria-hidden="true"><path class="draw" pathLength="1" style="--len:1" d="M12 6V1000"></path></svg>
+      <ol class="ap__st">
+        <li class="rv"><span class="n mono">01</span><h3>UNDERSTAND</h3><p>Clarify the problem, requirements, constraints, and expected outcome.</p></li>
+        <li class="rv" style="transition-delay:.15s"><span class="n mono">02</span><h3>ARCHITECT</h3><p>Plan the experience, system structure, technology choices, and interactions.</p></li>
+        <li class="rv" style="transition-delay:.3s"><span class="n mono">03</span><h3>IMPLEMENT</h3><p>Build the interface, backend, integrations, and essential functionality.</p></li>
+        <li class="rv" style="transition-delay:.45s"><span class="n mono">04</span><h3>REFINE</h3><p>Improve usability, responsiveness, accessibility, reliability, and performance.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec sec--white" id="journey" aria-labelledby="jr-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>05</b> / Journey</span></p>
+    <h2 class="rv" id="jr-h" style="max-width:16ch;margin:28px 0 clamp(48px,6vw,88px)">Learning. Experimenting. Building. <em class="s">Growing.</em></h2>
+    <div class="jr">
+      <div class="jr__stick" aria-hidden="true">
+        <p class="anno">Current stage</p>
+        <p class="jr__label"><b id="jrN">01</b><span id="jrT">Learning</span></p>
+        <div class="jr__track" id="jrTrack"><i style="left:0"></i><i style="left:25%"></i><i style="left:50%"></i><i style="left:75%"></i><i style="left:100%"></i><span class="jr__mk"></span></div>
+      </div>
+      <ol class="jr__st">
+        <li class="rv is-on"><span class="n mono">01</span><h3>LEARNING</h3><p>Strengthening technical foundations and expanding practical knowledge.</p></li>
+        <li class="rv"><span class="n mono">02</span><h3>BUILDING</h3><p>Turning ideas into functional software and useful digital experiences.</p></li>
+        <li class="rv"><span class="n mono">03</span><h3>EXPERIMENTING</h3><p>Exploring new approaches to AI, automation, architecture, and application development.</p></li>
+        <li class="rv"><span class="n mono">04</span><h3>SHIPPING</h3><p>Working toward complete, usable, production-ready implementations.</p></li>
+        <li class="rv"><span class="n mono">05</span><h3>GROWING</h3><p>Improving through feedback, experimentation, and continued practice.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="work" aria-labelledby="wk-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>06</b> / Selected Work</span></p>
+    <div class="shead">
+      <h2 class="rv" id="wk-h">The next chapter is being <em class="s">built.</em></h2>
+      <p class="rv">Currently building production-ready products that will be showcased here.</p>
+    </div>
+    <div class="wk">
+      <div class="rv">
+        <ul class="wk__rows" aria-label="Work archive">
+          <li><span class="c">W—01</span><span class="s mono">In development</span></li>
+          <li><span class="c">W—02</span><span class="s mono">In development</span></li>
+          <li><span class="c">W—03</span><span class="s mono">Coming soon</span></li>
+        </ul>
+        <div class="wk__studies">
+          <figure>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><rect x="24" y="24" width="72" height="72"></rect><rect x="38" y="38" width="44" height="44" transform="rotate(45 60 60)" class="c"></rect><circle cx="60" cy="60" r="3" class="f"></circle></svg>
+            <figcaption>Study — illustration, not a project</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100A80 80 0 0 1 100 20"></path><path d="M40 100A60 60 0 0 1 100 40" class="c"></path><path d="M60 100A40 40 0 0 1 100 60"></path><path d="M20 100H100V20"></path></svg>
+            <figcaption>Study — illustration, not a project</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="30" r="2.5"></circle><circle cx="60" cy="30" r="2.5"></circle><circle cx="90" cy="30" r="2.5"></circle><circle cx="30" cy="60" r="2.5"></circle><circle cx="90" cy="60" r="2.5"></circle><circle cx="30" cy="90" r="2.5"></circle><circle cx="60" cy="90" r="2.5"></circle><circle cx="90" cy="90" r="2.5"></circle><path d="M30 90L60 60L90 30" class="c"></path><circle cx="60" cy="60" r="4" class="f"></circle></svg>
+            <figcaption>Study — illustration, not a project</figcaption>
+          </figure>
+        </div>
+      </div>
+      <figure class="wk__fig rv">
+        <svg viewBox="0 0 640 520" role="img" aria-label="Abstract cropped geometry marked Work in progress">
+          <defs><pattern id="wkg" width="40" height="40" patternUnits="userSpaceOnUse"><path class="g" d="M40 0H0V40"></path></pattern></defs>
+          <rect width="640" height="520" fill="url(#wkg)"></rect>
+          <circle class="k" cx="500" cy="400" r="270"></circle>
+          <circle class="k" cx="500" cy="400" r="150"></circle>
+          <rect class="k" x="80" y="160" width="280" height="200"></rect>
+          <path class="k" d="M80 360L360 160M220 160V520"></path>
+          <path class="c draw" pathLength="1" style="--len:1" d="M0 470C160 470 260 300 360 300S540 120 640 100"></path>
+          <circle cx="360" cy="300" r="6" fill="#405CF5"></circle>
+          <circle cx="220" cy="260" r="5" fill="#fff" stroke="#111318"></circle>
+          <rect x="24" y="24" width="224" height="40" fill="#fff"></rect>
+          <circle cx="44" cy="44" r="5" fill="#F36B4F"></circle>
+          <text x="60" y="49">WORK IN PROGRESS</text>
+          <text class="sm" x="616" y="500" text-anchor="end">FIG.06 — CROPPED</text>
+        </svg>
+        <figcaption class="anno"><span>W—01 / W—02 / W—03</span><span>Not yet public</span></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="focus" id="focus" aria-labelledby="fc-h">
+  <div class="wrap">
+    <p class="idx rv"><span>Current Focus</span></p>
+    <h2 class="rv" id="fc-h">What matters is what gets <em class="s">built.</em></h2>
+    <div class="focus__row">
+      <div class="focus__line rv" aria-hidden="true">
+        <svg viewBox="0 0 1000 24" preserveAspectRatio="none"><path class="draw" pathLength="1" style="--len:1" d="M0 12H1000"></path></svg>
+        <p class="focus__lbl mono"><span>Skills</span><span>Problems</span><span>Products</span></p>
+      </div>
+      <p class="rv">Currently focused on building skills, solving real-world problems, and creating impactful software products.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq" aria-labelledby="fq-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>07</b> / FAQ</span></p>
+    <div class="fq__top">
+      <h2 class="rv" id="fq-h">A few useful <em class="s">answers.</em></h2>
+      <p class="anno rv">05 questions</p>
+    </div>
+    <ul class="fq rv">
+      <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="true" aria-controls="fa1" id="fq1"><span class="n">Q/01</span>What kind of software do you build?<span class="pl" aria-hidden="true"></span></button></h3>
+        <div class="fq__a" id="fa1" role="region" aria-labelledby="fq1"><p>AI-powered software, automation systems, SaaS products, web applications, websites and mobile apps, built around each project&#39;s requirements.</p></div></li>
+      <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa2" id="fq2"><span class="n">Q/02</span>Can you handle both frontend and backend development?<span class="pl" aria-hidden="true"></span></button></h3>
+        <div class="fq__a" id="fa2" role="region" aria-labelledby="fq2"><p>Yes. I work across UI/UX, frontend, backend, APIs, databases, authentication and deployment, so the whole solution fits together.</p></div></li>
+      <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa3" id="fq3"><span class="n">Q/03</span>Do you work with AI and automation?<span class="pl" aria-hidden="true"></span></button></h3>
+        <div class="fq__a" id="fa3" role="region" aria-labelledby="fq3"><p>Yes. AI agents, chatbots, AI integrations and workflow and business automation are a core focus.</p></div></li>
+      <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa4" id="fq4"><span class="n">Q/04</span>How do you choose the right technology?<span class="pl" aria-hidden="true"></span></button></h3>
+        <div class="fq__a" id="fa4" role="region" aria-labelledby="fq4"><p>By starting from the requirements: the problem, constraints and expected outcome decide the stack, not habit.</p></div></li>
+      <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa5" id="fq5"><span class="n">Q/05</span>How can I discuss a project with you?<span class="pl" aria-hidden="true"></span></button></h3>
+        <div class="fq__a" id="fa5" role="region" aria-labelledby="fq5"><p>Email <a href="mailto:viratkumar87881@gmail.com">viratkumar87881@gmail.com</a>, message on WhatsApp at <a href="https://wa.me/919296933126" rel="noopener" target="_blank">+91 9296933126</a>, or use the <a href="#contact">contact form</a>.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<section class="finale" id="contact" aria-labelledby="ct-h">
+  <div class="wrap">
+    <p class="idx rv"><span><b>08</b> / Contact</span></p>
+    <div class="ct">
+      <div>
+        <h2 class="rv" id="ct-h">Have an idea <em class="s">worth</em> building?</h2>
+        <p class="ct__lead rv">Let&#39;s turn your requirements into a thoughtful, well-built digital solution.</p>
+        <div class="ct__acts rv">
+          <a class="btn" href="mailto:viratkumar87881@gmail.com?subject=Project%20enquiry">LET&#39;S BUILD SOMETHING AMAZING ↗</a>
+          <button class="btn btn--ghost" type="button" id="startBtn">START YOUR PROJECT</button>
+        </div>
+        <svg class="sysline rv" viewBox="0 0 360 80" aria-hidden="true" style="color:var(--slate-d);margin-top:56px;max-width:360px">
+          <path class="draw" d="M8 40H200V16H340" style="--len:400"></path>
+          <circle cx="8" cy="40" r="4" fill="#405CF5" stroke="none"></circle><circle cx="200" cy="40" r="4" fill="#111318" stroke="#8D929D"></circle><circle cx="340" cy="16" r="4" fill="#F36B4F" stroke="none"></circle>
+          <text x="8" y="64" style="fill:#8D929D">IDEA</text><text x="200" y="64" text-anchor="middle" style="fill:#8D929D">REQUIREMENTS</text><text x="340" y="40" text-anchor="end" style="fill:#8D929D">BUILT</text>
+        </svg>
+      </div>
+      <div class="ct__panel rv">
+        <div class="ch">
+          <span class="mono">Email</span>
+          <a href="mailto:viratkumar87881@gmail.com" id="emailLink">viratkumar87881@gmail.com</a>
+          <button class="copy" type="button" id="copyBtn">Copy Email</button>
+          <span class="copy-st" id="copySt" aria-live="polite"></span>
+        </div>
+        <div class="ch">
+          <span class="mono">WhatsApp</span>
+          <a href="https://wa.me/919296933126" rel="noopener" target="_blank">+91 9296933126 ↗</a>
+        </div>
+        <form class="form" id="form" novalidate="">
+          <div class="fld"><label class="mono" for="fName">Name</label><input id="fName" name="name" required="" autocomplete="name" aria-describedby="eName"/><p class="err" id="eName"></p></div>
+          <div class="fld"><label class="mono" for="fEmail">Email</label><input id="fEmail" name="email" type="email" required="" autocomplete="email" aria-describedby="eEmail"/><p class="err" id="eEmail"></p></div>
+          <div class="fld"><label class="mono" for="fBrief">Project brief</label><textarea id="fBrief" name="brief" required="" aria-describedby="eBrief"></textarea><p class="err" id="eBrief"></p></div>
+          <button class="btn" type="submit">Send enquiry ↗</button>
+          <p class="form-st" id="formSt" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+    <footer class="foot">
+      <div>
+        <a class="wordmark" href="#top"><i aria-hidden="true"></i>VIRAT KUMAR</a>
+        <p>API Powered Developer · Startup Founder · Full Stack Developer · AI Automation Engineer</p>
+      </div>
+      <ul>
+        <li><a href="mailto:viratkumar87881@gmail.com">viratkumar87881@gmail.com</a></li>
+        <li><a href="https://wa.me/919296933126" rel="noopener" target="_blank">WhatsApp +91 9296933126 ↗</a></li>
+      </ul>
+      <div class="foot__end">
+        <a class="tlink" href="#top" style="align-self:flex-start">Back to top ↑</a>
+        <p class="mono">Built with intention. Improved through practice.</p>
+      </div>
+    </footer>
+  </div>
+</section>
+
+<script>
+(function(){
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function(s,c){return (c||document).querySelector(s)}, $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+  // reveals + path draws
+  var els = $$('.rv,.draw');
+  if (reduce || !('IntersectionObserver' in window)) els.forEach(function(e){e.classList.add('in')});
+  else { var io = new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -6% 0px'}); els.forEach(function(e){io.observe(e)}); }
+  // nav solid + active
+  var nav = $('#nav'), hero = $('.hero');
+  function onScroll(){ nav.classList.toggle('is-solid', scrollY > hero.offsetHeight - 80); }
+  addEventListener('scroll', onScroll, {passive:true}); onScroll();
+  var links = $$('.nav__links a');
+  if ('IntersectionObserver' in window) {
+    var so = new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){ links.forEach(function(a){ var on = a.getAttribute('href') === '#'+e.target.id; a.classList.toggle('is-active', on); if(on) a.setAttribute('aria-current','true'); else a.removeAttribute('aria-current'); }); } })},{rootMargin:'-45% 0px -50% 0px'});
+    $$('main section[id], #contact').forEach(function(s){so.observe(s)});
+  }
+  // mobile menu
+  var ov = $('#overlay'), mb = $('#menuBtn'), mc = $('#menuClose');
+  function setMenu(open){ ov.classList.toggle('is-open', open); mb.setAttribute('aria-expanded', open); document.body.style.overflow = open ? 'hidden' : ''; (open ? mc : mb).focus(); }
+  mb.addEventListener('click', function(){ setMenu(true) });
+  mc.addEventListener('click', function(){ setMenu(false) });
+  $$('#overlay a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false) }) });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && ov.classList.contains('is-open')) setMenu(false); });
+  // hero parallax (fine pointers)
+  var dg = $('#diagram');
+  if (!reduce && matchMedia('(pointer: fine)').matches && dg) {
+    hero.addEventListener('pointermove', function(e){ var r = hero.getBoundingClientRect(); var x = ((e.clientX - r.left)/r.width - .5)*12, y = ((e.clientY - r.top)/r.height - .5)*12; dg.style.transform = 'translate('+x.toFixed(1)+'px,'+y.toFixed(1)+'px)'; });
+    hero.addEventListener('pointerleave', function(){ dg.style.transform = '' });
+  }
+  // capability tabs / accordion
+  var tabs = $$('.cap__tab'), mq = matchMedia('(max-width: 900px)');
+  function select(t, toggle){
+    var wasOpen = t.getAttribute('aria-selected') === 'true';
+    tabs.forEach(function(x){ var on = x === t && !(toggle && mq.matches && wasOpen); x.setAttribute('aria-selected', on); x.tabIndex = (x === t) ? 0 : -1; document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ select(t, true) });
+    t.addEventListener('keydown', function(e){
+      var k = e.key, n = null;
+      if (k === 'ArrowDown' || k === 'ArrowRight') n = tabs[(i+1)%tabs.length];
+      else if (k === 'ArrowUp' || k === 'ArrowLeft') n = tabs[(i-1+tabs.length)%tabs.length];
+      else if (k === 'Home') n = tabs[0]; else if (k === 'End') n = tabs[tabs.length-1];
+      if (n) { e.preventDefault(); n.focus(); select(n); }
+    });
+  });
+  mq.addEventListener && mq.addEventListener('change', function(){ if (!tabs.some(function(t){return t.getAttribute('aria-selected')==='true'})) select(tabs[0]); });
+  // expertise map / accordion
+  var exItems = $$('.ex__item'), exNodes = $$('#exMap circle');
+  function exSet(i, toggle){
+    var it = exItems[i], closing = toggle && mq.matches && it.classList.contains('is-open');
+    exItems.forEach(function(x, j){ var on = j === i && !closing; x.classList.toggle('is-open', on); $('.ex__btn', x).setAttribute('aria-expanded', on); });
+    if (closing) return;
+    var b = $('.ex__btn', it);
+    $('#exN').textContent = $('.n', b).textContent;
+    $('#exT').textContent = b.childNodes[1].textContent;
+    $('#exD').textContent = $('.ex__d', it).textContent;
+    exNodes.forEach(function(c, j){ c.classList.toggle('on', j === i); });
+  }
+  exItems.forEach(function(it, i){
+    var b = $('.ex__btn', it);
+    b.addEventListener('click', function(){ exSet(i, true) });
+    b.addEventListener('focus', function(){ if (!mq.matches) exSet(i) });
+    b.addEventListener('mouseenter', function(){ if (!mq.matches && matchMedia('(pointer: fine)').matches) exSet(i) });
+  });
+  mq.addEventListener && mq.addEventListener('change', function(){ if (!mq.matches && !$('.ex__item.is-open')) exSet(0); });
+  // journey active stage
+  var jrSt = $$('.jr__st li'), jrMk = $('#jrTrack');
+  function jrSet(i){
+    jrSt.forEach(function(s, j){ s.classList.toggle('is-on', j === i) });
+    $('#jrN').textContent = ('0' + (i + 1));
+    $('#jrT').textContent = $('h3', jrSt[i]).textContent.charAt(0) + $('h3', jrSt[i]).textContent.slice(1).toLowerCase();
+    jrMk.style.setProperty('--i', i);
+  }
+  if ('IntersectionObserver' in window) {
+    var jo = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) jrSet(jrSt.indexOf(e.target)); }); }, {rootMargin:'-40% 0px -55% 0px'});
+    jrSt.forEach(function(s){ jo.observe(s) });
+  }
+  // faq accordion
+  $$('.fq__q').forEach(function(q){
+    var p = document.getElementById(q.getAttribute('aria-controls'));
+    p.hidden = q.getAttribute('aria-expanded') !== 'true';
+    q.addEventListener('click', function(){ var open = q.getAttribute('aria-expanded') !== 'true'; q.setAttribute('aria-expanded', open); p.hidden = !open; });
+  });
+  // copy email
+  var cs = $('#copySt'), email = 'viratkumar87881@gmail.com';
+  function fail(){ cs.textContent = "Couldn't copy — select it manually"; var r = document.createRange(); r.selectNodeContents($('#emailLink')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+  $('#copyBtn').addEventListener('click', function(){
+    try { if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(email).then(function(){ cs.textContent = 'Email copied' }, fail); else fail(); } catch(e){ fail(); }
+  });
+  // form
+  var f = $('#form'), st = $('#formSt');
+  $('#startBtn').addEventListener('click', function(){ $('#fName').focus(); });
+  function err(id, input, msg){ $('#'+id).textContent = msg; input.setAttribute('aria-invalid', msg ? 'true' : 'false'); return !msg; }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var n = $('#fName'), m = $('#fEmail'), b = $('#fBrief');
+    var ok = [
+      err('eName', n, n.value.trim() ? '' : 'Please enter your name.'),
+      err('eEmail', m, !m.value.trim() ? 'Please enter your email.' : (/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim()) ? '' : 'Please enter a valid email address.')),
+      err('eBrief', b, b.value.trim() ? '' : 'Please describe your project.')
+    ];
+    if (ok.indexOf(false) > -1) { st.textContent = ''; f.querySelector('[aria-invalid="true"]').focus(); return; }
+    var subject = 'Project enquiry from ' + n.value.trim();
+    var body = 'Name: ' + n.value.trim() + '\nEmail: ' + m.value.trim() + '\n\nProject brief:\n' + b.value.trim();
+    st.textContent = 'Opening your email app to send this message.';
+    window.location.href = 'mailto:' + email + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
+
+
+</body></html>
