@@ -246,9 +246,18 @@ p{margin:0 0 1em}
 .wk__rows li{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:76px;border-bottom:1px solid var(--line)}
 .wk__rows .c{font:600 clamp(1.4rem,2.2vw,1.9rem) var(--display);letter-spacing:-.02em}
 .wk__rows .s{display:inline-flex;align-items:center;gap:8px;color:var(--slate-d)}
-.wk__rows .s::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cobalt)}
+.wk__rows .s::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--slate-d)}
 .wk__rows li:last-child .s::before{background:transparent;border:1px solid var(--slate-d)}
-.wk__studies{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:0}
+.wk__rows li.x-wk__live{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:6px 16px;padding:16px 0}
+.x-wk__live .c{grid-row:1/3}
+.x-wk__nm{display:flex;flex-direction:column;gap:4px;min-width:0}
+.x-wk__nm a{display:inline-flex;align-items:center;align-self:flex-start;min-height:44px;font:600 clamp(1.4rem,2.2vw,1.9rem)/1.1 var(--display);letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.x-wk__nm a:hover{color:var(--cobalt)}
+.x-wk__nm small{color:var(--slate-d);font-size:12px;overflow-wrap:anywhere}
+.x-wk__live .s{color:var(--cobalt);justify-self:end}
+.x-wk__live .s::before{background:var(--cobalt)}
+.x-wk__go{grid-column:3;justify-self:end;white-space:nowrap}
+.wk__studies{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:0}
 .wk__studies figure{margin:0}
 .wk__studies svg{width:100%;height:auto;background:var(--grey);border-radius:2px}
 .wk__studies svg *{fill:none;stroke:var(--ink);stroke-width:1}
@@ -285,17 +294,16 @@ p{margin:0 0 1em}
 .x-os__row:hover .v i,.x-os__row:focus-visible .v i{transform:translate(3px,-3px)}
 .x-os__all{margin-top:28px}
 @media(max-width:900px){.x-os__row{grid-template-columns:minmax(0,1fr) auto;align-items:start;padding:22px 0}.x-os__row .nm,.x-os__row .d{grid-column:1/-1}.x-os__row .n{grid-row:1}.x-os__row .e{display:contents}.x-os__row .t{grid-row:1;grid-column:2;text-align:right}.x-os__row .v{grid-column:1/-1;justify-self:start;margin-top:4px}}
-@media(max-width:480px){.wk__studies{grid-template-columns:repeat(2,minmax(0,1fr))}.wk__studies figure:last-child{display:none}}
-/* 06 featured case study */
-.x-sp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;column-gap:clamp(40px,6vw,96px);border-top:1px solid var(--ink);padding-top:clamp(32px,4vw,48px);margin-bottom:clamp(88px,10vw,144px)}
+/* 06 W—01 case notes */
+.x-sp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;column-gap:clamp(40px,6vw,96px);border-top:1px solid var(--ink);padding-top:clamp(32px,4vw,48px);margin-top:clamp(64px,8vw,112px)}
 .x-sp__head{grid-column:1;grid-row:1}
 .x-sp__body{grid-column:1;grid-row:2}
 .x-sp__fig{grid-column:2;grid-row:1/3;align-self:center;justify-self:center;margin:0;width:100%;max-width:340px}
 .x-sp__kick{color:var(--slate-d);margin:0 0 clamp(28px,4vw,44px);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.x-sp__kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--cobalt);flex:none}
+.x-sp__kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink);flex:none}
 .x-sp__kick b{color:var(--cobalt);font-weight:500}
-.x-sp__title{font:700 clamp(3.5rem,8.3vw,8rem)/.86 var(--display);letter-spacing:-.045em;margin:0}
-.x-sp__sub{font:500 clamp(1.4rem,2.6vw,2.2rem)/1.15 var(--display);letter-spacing:-.02em;margin:18px 0 28px}
+.x-sp__title{font:700 clamp(2.4rem,5vw,4.5rem)/.9 var(--display);letter-spacing:-.04em;margin:0}
+.x-sp__sub{font:500 clamp(1.2rem,2vw,1.6rem)/1.2 var(--display);letter-spacing:-.02em;margin:14px 0 20px}
 .x-sp__sum{color:var(--graph);font-size:clamp(16px,1.3vw,19px);max-width:52ch;margin:0}
 .x-sp__role{font:500 12px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);padding-left:16px;border-left:1px solid var(--cobalt);margin:32px 0 clamp(40px,5vw,56px)}
 .x-sp__stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 clamp(48px,6vw,72px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
@@ -312,8 +320,8 @@ p{margin:0 0 1em}
 .x-sp__caps h4{font:600 clamp(1.1rem,1.6vw,1.35rem)/1.2 var(--display);letter-spacing:-.015em;margin:0}
 .x-sp__caps p{color:var(--graph);font-size:16px;line-height:1.5;margin:0;max-width:56ch}
 .x-sp__note{color:var(--slate-d);font-size:14px;line-height:1.5;margin:16px 0 clamp(40px,5vw,56px);max-width:56ch}
-.x-sp__pull{font:500 clamp(1.3rem,2.1vw,1.75rem)/1.3 var(--display);letter-spacing:-.015em;max-width:30ch;margin:0 0 24px}
-.x-sp__pull span{display:block;font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--slate-d);margin-bottom:12px}
+.x-sp__pull{font:500 clamp(1.05rem,1.4vw,1.2rem)/1.45 var(--display);letter-spacing:-.01em;max-width:56ch;margin:0 0 20px}
+.x-sp__pull span{font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--slate-d)}
 .x-sp__tags{color:var(--slate-d);margin:0 0 36px}
 .x-sp__acts{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
 .x-sp__frame{position:relative;border:1px solid var(--ink);border-radius:4px;background:var(--white);padding:8px;box-shadow:0 28px 56px -32px rgba(17,19,24,.35)}
@@ -682,11 +690,48 @@ p{margin:0 0 1em}
     <p class="idx rv"><span><b>06</b> / Selected Work</span></p>
     <div class="shead">
       <h2 class="rv" id="wk-h">The next chapter is being <em class="s">built.</em></h2>
-      <p class="rv">SPARK is live. More production-ready products are being built and will be showcased here.</p>
+      <p class="rv">SPARK is live. W—02 and W—03 are being built and will be showcased here.</p>
+    </div>
+    <div class="wk">
+      <div class="rv">
+        <ul class="wk__rows" aria-label="Project index">
+          <li class="x-wk__live"><span class="c">W—01</span><span class="x-wk__nm"><a href="#sp-h">SPARK</a><small class="mono">Android app · v1.0</small></span><span class="s mono">Live</span><a class="tlink x-wk__go" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit ↗</a></li>
+          <li><span class="c">W—02</span><span class="s mono">In development</span></li>
+          <li><span class="c">W—03</span><span class="s mono">Coming soon</span></li>
+        </ul>
+        <div class="wk__studies">
+          <figure>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100A80 80 0 0 1 100 20"/><path d="M40 100A60 60 0 0 1 100 40" class="c"/><path d="M60 100A40 40 0 0 1 100 60"/><path d="M20 100H100V20"/></svg>
+            <figcaption>Study — illustration, not a project</figcaption>
+          </figure>
+          <figure>
+            <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="30" r="2.5"/><circle cx="60" cy="30" r="2.5"/><circle cx="90" cy="30" r="2.5"/><circle cx="30" cy="60" r="2.5"/><circle cx="90" cy="60" r="2.5"/><circle cx="30" cy="90" r="2.5"/><circle cx="60" cy="90" r="2.5"/><circle cx="90" cy="90" r="2.5"/><path d="M30 90L60 60L90 30" class="c"/><circle cx="60" cy="60" r="4" class="f"/></svg>
+            <figcaption>Study — illustration, not a project</figcaption>
+          </figure>
+        </div>
+      </div>
+      <figure class="wk__fig rv">
+        <svg viewBox="0 0 640 520" role="img" aria-label="Abstract cropped geometry marked Work in progress">
+          <defs><pattern id="wkg" width="40" height="40" patternUnits="userSpaceOnUse"><path class="g" d="M40 0H0V40"/></pattern></defs>
+          <rect width="640" height="520" fill="url(#wkg)"/>
+          <circle class="k" cx="500" cy="400" r="270"/>
+          <circle class="k" cx="500" cy="400" r="150"/>
+          <rect class="k" x="80" y="160" width="280" height="200"/>
+          <path class="k" d="M80 360L360 160M220 160V520"/>
+          <path class="c draw" pathLength="1" style="--len:1" d="M0 470C160 470 260 300 360 300S540 120 640 100"/>
+          <circle cx="360" cy="300" r="6" fill="#405CF5"/>
+          <circle cx="220" cy="260" r="5" fill="#fff" stroke="#111318"/>
+          <rect x="24" y="24" width="224" height="40" fill="#fff"/>
+          <circle cx="44" cy="44" r="5" fill="#F36B4F"/>
+          <text x="60" y="49">WORK IN PROGRESS</text>
+          <text class="sm" x="616" y="500" text-anchor="end">FIG.06 — CROPPED</text>
+        </svg>
+        <figcaption class="anno"><span>W—02 / W—03</span><span>Not yet public</span></figcaption>
+      </figure>
     </div>
     <article class="x-sp" aria-labelledby="sp-h">
       <div class="x-sp__head rv">
-        <p class="x-sp__kick mono"><span><b>Featured</b> · F—01 · Android App · v1.0 · Shipped 2026</span></p>
+        <p class="x-sp__kick mono"><span>W—01 / SPARK — Case notes</span></p>
         <h3 class="x-sp__title" id="sp-h">SPARK</h3>
         <p class="x-sp__sub">Never lose a great <em class="s">idea.</em></p>
         <p class="x-sp__sum">A local-first Android app that captures ideas by text or voice, keeps them private on the device, and brings the forgotten ones back when they matter.</p>
@@ -716,7 +761,7 @@ p{margin:0 0 1em}
           <p class="x-sp__note"><strong>Private by default.</strong> Ideas live in a local SQLite database on the device; voice recordings never leave it.</p>
         </div>
         <div class="rv">
-          <p class="x-sp__pull"><span>The difference</span>Free, no account, fully offline, local voice transcription and idea resurfacing — in about 5.2 MB.</p>
+          <p class="x-sp__pull"><span>The difference ·</span> Free, no account, fully offline, local voice transcription and idea resurfacing — in about 5.2 MB.</p>
           <p class="x-sp__tags mono">Android / SQLite / On-device speech-to-text / Local-first</p>
           <div class="x-sp__acts">
             <a class="btn" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit SPARK ↗</a>
@@ -725,47 +770,6 @@ p{margin:0 0 1em}
         </div>
       </div>
     </article>
-    <div class="wk">
-      <div class="rv">
-        <ul class="wk__rows" aria-label="Work archive">
-          <li><span class="c">W—01</span><span class="s mono">In development</span></li>
-          <li><span class="c">W—02</span><span class="s mono">In development</span></li>
-          <li><span class="c">W—03</span><span class="s mono">Coming soon</span></li>
-        </ul>
-        <div class="wk__studies">
-          <figure>
-            <svg viewBox="0 0 120 120" aria-hidden="true"><rect x="24" y="24" width="72" height="72"/><rect x="38" y="38" width="44" height="44" transform="rotate(45 60 60)" class="c"/><circle cx="60" cy="60" r="3" class="f"/></svg>
-            <figcaption>Study — illustration, not a project</figcaption>
-          </figure>
-          <figure>
-            <svg viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100A80 80 0 0 1 100 20"/><path d="M40 100A60 60 0 0 1 100 40" class="c"/><path d="M60 100A40 40 0 0 1 100 60"/><path d="M20 100H100V20"/></svg>
-            <figcaption>Study — illustration, not a project</figcaption>
-          </figure>
-          <figure>
-            <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="30" cy="30" r="2.5"/><circle cx="60" cy="30" r="2.5"/><circle cx="90" cy="30" r="2.5"/><circle cx="30" cy="60" r="2.5"/><circle cx="90" cy="60" r="2.5"/><circle cx="30" cy="90" r="2.5"/><circle cx="60" cy="90" r="2.5"/><circle cx="90" cy="90" r="2.5"/><path d="M30 90L60 60L90 30" class="c"/><circle cx="60" cy="60" r="4" class="f"/></svg>
-            <figcaption>Study — illustration, not a project</figcaption>
-          </figure>
-        </div>
-      </div>
-      <figure class="wk__fig rv">
-        <svg viewBox="0 0 640 520" role="img" aria-label="Abstract cropped geometry marked Work in progress">
-          <defs><pattern id="wkg" width="40" height="40" patternUnits="userSpaceOnUse"><path class="g" d="M40 0H0V40"/></pattern></defs>
-          <rect width="640" height="520" fill="url(#wkg)"/>
-          <circle class="k" cx="500" cy="400" r="270"/>
-          <circle class="k" cx="500" cy="400" r="150"/>
-          <rect class="k" x="80" y="160" width="280" height="200"/>
-          <path class="k" d="M80 360L360 160M220 160V520"/>
-          <path class="c draw" pathLength="1" style="--len:1" d="M0 470C160 470 260 300 360 300S540 120 640 100"/>
-          <circle cx="360" cy="300" r="6" fill="#405CF5"/>
-          <circle cx="220" cy="260" r="5" fill="#fff" stroke="#111318"/>
-          <rect x="24" y="24" width="224" height="40" fill="#fff"/>
-          <circle cx="44" cy="44" r="5" fill="#F36B4F"/>
-          <text x="60" y="49">WORK IN PROGRESS</text>
-          <text class="sm" x="616" y="500" text-anchor="end">FIG.06 — CROPPED</text>
-        </svg>
-        <figcaption class="anno"><span>W—01 / W—02 / W—03</span><span>Not yet public</span></figcaption>
-      </figure>
-    </div>
     <div class="x-os rv">
       <div class="x-os__head">
         <h3 class="idx" id="os-h">Open Source / On GitHub</h3>
