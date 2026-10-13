@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
 <script>document.documentElement.classList.add('js')</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Virat Kumar","jobTitle":"API Powered Developer & AI Automation Engineer","email":"viratkumar87881@gmail.com","sameAs":["https://github.com/viratk-dev"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Virat Kumar","jobTitle":"API Powered Developer & AI Automation Engineer","email":"viratkumar87881@gmail.com","sameAs":["https://github.com/viratk-dev","https://www.threads.com/@iamviratt03"]}</script>
 <style>
 :root{--ink:#111318;--porc:#F4F0E8;--white:#fff;--cobalt:#405CF5;--graph:#292D36;--slate:#8D929D;--slate-d:#5F646E;--line:#D8D4CC;--coral:#F36B4F;--grey:#E9E6DE;
 --display:"Space Grotesk",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif;--body:Inter,system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -112,6 +112,18 @@ p{margin:0 0 1em}
 .sysline path,.sysline line{fill:none;stroke:currentColor;stroke-width:1}
 .sysline text{font:500 10.5px var(--mono);letter-spacing:.08em;fill:var(--slate-d)}
 @media(max-width:900px){.about__side,.about__body{grid-column:1/-1}.about__side{order:2;margin-top:32px}}
+.x-else{grid-column:1/-1;margin-top:clamp(56px,7vw,96px)}
+.x-else__lbl{color:var(--slate-d);margin:0 0 20px}
+.x-else__list{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.x-else__list li{border-bottom:1px solid var(--line)}
+.x-else__row{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr);gap:6px 24px;align-items:center;min-height:72px;padding:16px 0;text-decoration:none;color:var(--ink)}
+.x-else__row .nm{font:600 clamp(1.1rem,1.6vw,1.35rem)/1.2 var(--display);letter-spacing:-.015em;transition:color .25s var(--ease)}
+.x-else__row .d{color:var(--graph);font-size:16px;line-height:1.5}
+.x-else__row .v{justify-self:end;font:500 15px var(--display);border-bottom:1px solid currentColor;overflow-wrap:anywhere;transition:color .2s var(--ease)}
+.x-else__row .v i{display:inline-block;font-style:normal;transition:transform .25s var(--ease)}
+.x-else__row:hover .nm,.x-else__row:hover .v,.x-else__row:focus-visible .nm,.x-else__row:focus-visible .v{color:var(--cobalt)}
+.x-else__row:hover .v i,.x-else__row:focus-visible .v i{transform:translate(3px,-3px)}
+@media(max-width:900px){.x-else{order:3}.x-else__row{grid-template-columns:minmax(0,1fr);align-items:start;padding:20px 0}.x-else__row .v{justify-self:start;margin-top:4px}}
 /* capabilities */
 .cap__head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px 48px;align-items:end;margin:28px 0 clamp(48px,6vw,80px)}
 .cap__head h2{max-width:13ch}
@@ -386,6 +398,7 @@ p{margin:0 0 1em}
     <li><a href="#approach">Approach <span>04</span></a></li>
     <li><a href="#journey">Journey <span>05</span></a></li>
     <li><a href="https://github.com/viratk-dev" target="_blank" rel="noopener">GitHub <span>↗</span></a></li>
+    <li><a href="https://www.threads.com/@iamviratt03" target="_blank" rel="noopener">Threads <span>↗</span></a></li>
     <li><a href="#contact">Let's Talk <span>↗</span></a></li>
   </ul>
 </div>
@@ -455,6 +468,13 @@ p{margin:0 0 1em}
       <p>From UI/UX design to frontend, backend, APIs, databases, cloud integrations, AI agents, and production deployment, I build complete solutions according to business requirements.</p>
       <p>I use modern AI-assisted development workflows to deliver faster development, higher quality, cleaner architecture, and exceptional user experience without compromising engineering standards.</p>
       <p>Although I am currently 16 years old, my focus is on building production-quality software, continuously improving my skills, and creating real-world products.</p>
+    </div>
+    <div class="x-else rv">
+      <h3 class="x-else__lbl mono" id="else-h">Elsewhere / Follow the build</h3>
+      <ul class="x-else__list" aria-labelledby="else-h">
+        <li><a class="x-else__row" href="https://github.com/viratk-dev" target="_blank" rel="noopener"><span class="nm">GitHub</span><span class="d">Open-source tools &amp; experiments</span><span class="v">github.com/viratk-dev <i aria-hidden="true">↗</i></span></a></li>
+        <li><a class="x-else__row" href="https://www.threads.com/@iamviratt03" target="_blank" rel="noopener"><span class="nm">Threads</span><span class="d">Notes on AI, automation &amp; building in public</span><span class="v">@iamviratt03 <i aria-hidden="true">↗</i></span></a></li>
+      </ul>
     </div>
   </div>
 </section>
@@ -716,7 +736,7 @@ p{margin:0 0 1em}
       <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa4" id="fq4"><span class="n">Q/04</span>How do you choose the right technology?<span class="pl" aria-hidden="true"></span></button></h3>
         <div class="fq__a" id="fa4" role="region" aria-labelledby="fq4"><p>By starting from the requirements: the problem, constraints and expected outcome decide the stack, not habit.</p></div></li>
       <li><h3 style="font-size:inherit;margin:0"><button class="fq__q" type="button" aria-expanded="false" aria-controls="fa5" id="fq5"><span class="n">Q/05</span>How can I discuss a project with you?<span class="pl" aria-hidden="true"></span></button></h3>
-        <div class="fq__a" id="fa5" role="region" aria-labelledby="fq5"><p>Email <a href="mailto:viratkumar87881@gmail.com">viratkumar87881@gmail.com</a>, message on WhatsApp at <a href="https://wa.me/919296933126" target="_blank" rel="noopener">+91 9296933126</a>, or use the <a href="#contact">contact form</a>. You can also follow my work on GitHub at <a href="https://github.com/viratk-dev" target="_blank" rel="noopener">github.com/viratk-dev</a>.</p></div></li>
+        <div class="fq__a" id="fa5" role="region" aria-labelledby="fq5"><p>Email <a href="mailto:viratkumar87881@gmail.com">viratkumar87881@gmail.com</a>, message on WhatsApp at <a href="https://wa.me/919296933126" target="_blank" rel="noopener">+91 9296933126</a>, or use the <a href="#contact">contact form</a>. You can also follow my work on GitHub (<a href="https://github.com/viratk-dev" target="_blank" rel="noopener">github.com/viratk-dev</a>) and Threads (<a href="https://www.threads.com/@iamviratt03" target="_blank" rel="noopener">@iamviratt03</a>).</p></div></li>
     </ul>
   </div>
 </section>
@@ -755,6 +775,10 @@ p{margin:0 0 1em}
           <span class="mono">GitHub</span>
           <a href="https://github.com/viratk-dev" target="_blank" rel="noopener">github.com/viratk-dev ↗</a>
         </div>
+        <div class="ch">
+          <span class="mono">Threads</span>
+          <a href="https://www.threads.com/@iamviratt03" target="_blank" rel="noopener">@iamviratt03 ↗</a>
+        </div>
         <form class="form" id="form" novalidate>
           <div class="fld"><label class="mono" for="fName">Name</label><input id="fName" name="name" required autocomplete="name" aria-describedby="eName" /><p class="err" id="eName"></p></div>
           <div class="fld"><label class="mono" for="fEmail">Email</label><input id="fEmail" name="email" type="email" required autocomplete="email" aria-describedby="eEmail" /><p class="err" id="eEmail"></p></div>
@@ -773,6 +797,7 @@ p{margin:0 0 1em}
         <li><a href="mailto:viratkumar87881@gmail.com">viratkumar87881@gmail.com</a></li>
         <li><a href="https://wa.me/919296933126" target="_blank" rel="noopener">WhatsApp +91 9296933126 ↗</a></li>
         <li><a href="https://github.com/viratk-dev" target="_blank" rel="noopener">GitHub ↗</a></li>
+        <li><a href="https://www.threads.com/@iamviratt03" target="_blank" rel="noopener">Threads ↗</a></li>
       </ul>
       <div class="foot__end">
         <a class="tlink" href="#top" style="align-self:flex-start">Back to top ↑</a>
