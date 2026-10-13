@@ -13,7 +13,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Instrument+Serif:ital@1&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" />
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Virat Kumar","jobTitle":"API Powered Developer & AI Automation Engineer","email":"viratkumar87881@gmail.com","sameAs":["https://github.com/viratk-dev","https://www.threads.com/@iamviratt03"]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SPARK","description":"A local-first Android app that captures ideas by text or voice, keeps them private on the device, and brings the forgotten ones back when they matter.","operatingSystem":"Android","applicationCategory":"ProductivityApplication","softwareVersion":"1.0","url":"https://spark-download.vercel.app/","downloadUrl":"https://spark-download.vercel.app/SPARK.apk","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Virat Kumar"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SPARK","description":"A local-first Android app that captures ideas by text or voice, keeps them private on the device, and brings the forgotten ones back when they matter.","operatingSystem":"Android","applicationCategory":"ProductivityApplication","softwareVersion":"1.0","image":"spark-icon.png","url":"https://spark-download.vercel.app/","downloadUrl":"https://spark-download.vercel.app/SPARK.apk","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Virat Kumar"}}</script>
 <style>
 :root{--ink:#111318;--porc:#F4F0E8;--white:#fff;--cobalt:#405CF5;--graph:#292D36;--slate:#8D929D;--slate-d:#5F646E;--line:#D8D4CC;--coral:#F36B4F;--grey:#E9E6DE;
 --display:"Space Grotesk",system-ui,sans-serif;--serif:"Instrument Serif",Georgia,serif;--body:Inter,system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -294,49 +294,87 @@ p{margin:0 0 1em}
 .x-os__row:hover .v i,.x-os__row:focus-visible .v i{transform:translate(3px,-3px)}
 .x-os__all{margin-top:28px}
 @media(max-width:900px){.x-os__row{grid-template-columns:minmax(0,1fr) auto;align-items:start;padding:22px 0}.x-os__row .nm,.x-os__row .d{grid-column:1/-1}.x-os__row .n{grid-row:1}.x-os__row .e{display:contents}.x-os__row .t{grid-row:1;grid-column:2;text-align:right}.x-os__row .v{grid-column:1/-1;justify-self:start;margin-top:4px}}
-/* 06 W—01 case notes */
-.x-sp{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-rows:auto auto;column-gap:clamp(40px,6vw,96px);border-top:1px solid var(--ink);padding-top:clamp(32px,4vw,48px);margin-top:clamp(64px,8vw,112px)}
-.x-sp__head{grid-column:1;grid-row:1}
-.x-sp__body{grid-column:1;grid-row:2}
-.x-sp__fig{grid-column:2;grid-row:1/3;align-self:center;justify-self:center;margin:0;width:100%;max-width:340px}
-.x-sp__kick{color:var(--slate-d);margin:0 0 clamp(28px,4vw,44px);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+/* 06 W—01 case study */
+.x-wk__nm a img{width:32px;height:32px;border-radius:22.5%;border:1px solid var(--line);margin-right:12px;flex:none}
+.x-sp{display:flex;flex-direction:column;gap:clamp(64px,8vw,112px);border-top:1px solid var(--ink);padding-top:clamp(32px,4vw,48px);margin-top:clamp(64px,8vw,112px)}
+.x-sp__g{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:32px 24px;align-items:start}
+.x-sp__l{grid-column:1/6;min-width:0}
+.x-sp__r{grid-column:7/-1;min-width:0}
+.x-sp__kick{grid-column:1/-1;color:var(--slate-d);margin:0 0 clamp(8px,2vw,20px);display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .x-sp__kick::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ink);flex:none}
-.x-sp__kick b{color:var(--cobalt);font-weight:500}
-.x-sp__title{font:700 clamp(2.4rem,5vw,4.5rem)/.9 var(--display);letter-spacing:-.04em;margin:0}
-.x-sp__sub{font:500 clamp(1.2rem,2vw,1.6rem)/1.2 var(--display);letter-spacing:-.02em;margin:14px 0 20px}
-.x-sp__sum{color:var(--graph);font-size:clamp(16px,1.3vw,19px);max-width:52ch;margin:0}
-.x-sp__role{font:500 12px/1.7 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);padding-left:16px;border-left:1px solid var(--cobalt);margin:32px 0 clamp(40px,5vw,56px)}
-.x-sp__stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0 0 clamp(48px,6vw,72px);border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
-.x-sp__stats div{padding:22px 16px 20px 0;border-right:1px solid var(--line)}
-.x-sp__stats div+div{padding-left:16px}
-.x-sp__stats div:last-child{border-right:0}
-.x-sp__stats dt{font:700 clamp(1.7rem,2.8vw,2.6rem)/1 var(--display);letter-spacing:-.04em;white-space:nowrap}
-.x-sp__stats div:first-child dt{color:var(--cobalt)}
-.x-sp__stats dd{margin:12px 0 0;font:500 12px/1.45 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--slate-d)}
-.x-sp__lbl{color:var(--slate-d);margin:0 0 16px}
-.x-sp__caps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
-.x-sp__caps li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:4px 16px;padding:20px 0;border-bottom:1px solid var(--line)}
-.x-sp__caps .n{color:var(--cobalt);padding-top:4px;grid-row:1/3}
-.x-sp__caps h4{font:600 clamp(1.1rem,1.6vw,1.35rem)/1.2 var(--display);letter-spacing:-.015em;margin:0}
-.x-sp__caps p{color:var(--graph);font-size:16px;line-height:1.5;margin:0;max-width:56ch}
-.x-sp__note{color:var(--slate-d);font-size:14px;line-height:1.5;margin:16px 0 clamp(40px,5vw,56px);max-width:56ch}
-.x-sp__pull{font:500 clamp(1.05rem,1.4vw,1.2rem)/1.45 var(--display);letter-spacing:-.01em;max-width:56ch;margin:0 0 20px}
-.x-sp__pull span{font:500 12px/1.4 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--slate-d)}
-.x-sp__tags{color:var(--slate-d);margin:0 0 36px}
-.x-sp__acts{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center}
-.x-sp__frame{position:relative;border:1px solid var(--ink);border-radius:4px;background:var(--white);padding:8px;box-shadow:0 28px 56px -32px rgba(17,19,24,.35)}
+.x-sp__lbl{color:var(--slate-d);margin:0 0 20px}
+/* a. header */
+.x-sp__hd{align-items:end}
+.x-sp__id{grid-column:1/9;display:flex;align-items:flex-start;gap:clamp(20px,2.4vw,32px);min-width:0}
+.x-sp__icon{width:72px;height:72px;border-radius:22.5%;border:1px solid var(--line);flex:none;margin-top:4px}
+.x-sp__title{font:700 clamp(3rem,6.4vw,6rem)/.86 var(--display);letter-spacing:-.045em;margin:0}
+.x-sp__tag{font:500 clamp(1.15rem,1.8vw,1.5rem)/1.25 var(--display);letter-spacing:-.02em;margin:14px 0 12px}
+.x-sp__meta{color:var(--slate-d);margin:0;overflow-wrap:anywhere}
+.x-sp__acts{grid-column:9/-1;justify-self:end;display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;justify-content:flex-end}
+/* b. overview */
+.x-sp__facts{margin:0;border-top:1px solid var(--ink)}
+.x-sp__facts div{display:grid;grid-template-columns:minmax(96px,2fr) minmax(0,3fr);gap:4px 16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.x-sp__facts dt{font:500 12px/1.6 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--slate-d)}
+.x-sp__facts dd{margin:0;font-size:15px;line-height:1.45}
+.x-sp__brief{font:500 clamp(1.2rem,1.9vw,1.6rem)/1.4 var(--display);letter-spacing:-.015em;margin:0;max-width:40ch}
+/* c. visual + stats */
+.x-sp__vis{align-items:center}
+.x-sp__fig{margin:0;width:100%;max-width:340px}
+.x-sp__frame{border:1px solid var(--ink);border-radius:4px;background:var(--white);padding:8px}
 .x-sp__frame img{width:100%;height:auto;border-radius:2px}
 .x-sp__fig figcaption{margin-top:16px;color:var(--slate-d);font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;text-align:center}
+.x-sp__stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:0;border-top:1px solid var(--ink)}
+.x-sp__stats div{padding:clamp(24px,3vw,40px) 16px clamp(22px,2.6vw,32px) 0;border-bottom:1px solid var(--line);min-width:0}
+.x-sp__stats div:nth-child(odd){border-right:1px solid var(--line)}
+.x-sp__stats div:nth-child(even){padding-left:clamp(16px,2.4vw,32px)}
+.x-sp__stats dt{font:700 clamp(2rem,4.2vw,4rem)/1 var(--display);letter-spacing:-.045em;white-space:nowrap}
+.x-sp__stats div:first-child dt{color:var(--cobalt)}
+.x-sp__stats dd{margin:14px 0 0;font:500 12px/1.45 var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--slate-d)}
+/* d. what it does */
+.x-sp__caps{list-style:none;margin:0;padding:0;border-top:1px solid var(--ink)}
+.x-sp__caps>li{display:grid;grid-template-columns:48px minmax(0,1fr);gap:6px 16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.x-sp__caps .n{color:var(--slate-d);padding-top:5px;grid-row:1/4}
+.x-sp__caps h4{font:600 clamp(1.1rem,1.6vw,1.35rem)/1.2 var(--display);letter-spacing:-.015em;margin:0}
+.x-sp__caps p{color:var(--graph);font-size:16px;line-height:1.5;margin:0;max-width:56ch}
+.x-sp__stages{grid-column:2;list-style:none;margin:18px 0 4px;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.x-sp__stages li{position:relative;padding:22px 12px 0 0;font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.x-sp__stages li::before{content:"";position:absolute;left:0;top:0;width:9px;height:9px;border-radius:50%;background:var(--porc);border:1px solid var(--ink);box-sizing:border-box}
+.x-sp__stages li::after{content:"";position:absolute;left:9px;right:0;top:4px;height:1px;background:var(--ink)}
+.x-sp__stages li:last-child::after{display:none}
+.x-sp__stages li:first-child::before{background:var(--cobalt);border-color:var(--cobalt)}
+.x-sp__stages li:last-child::before{background:var(--coral);border-color:var(--coral)}
+/* e. private */
+.x-sp__priv{font:500 clamp(1.15rem,1.7vw,1.45rem)/1.45 var(--display);letter-spacing:-.015em;margin:0;max-width:44ch;padding-left:20px;border-left:1px solid var(--ink)}
+/* f. comparison */
+.x-sp__cmpw{position:relative;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.x-sp__cmp{width:100%;min-width:520px;border-collapse:collapse;border-top:1px solid var(--ink)}
+.x-sp__cmp th,.x-sp__cmp td{padding:16px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle;font:400 15px/1.35 var(--body);color:var(--graph);white-space:nowrap}
+.x-sp__cmp th:first-child{padding-left:0}
+.x-sp__cmp thead th{font:500 12px/1.4 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--slate-d)}
+.x-sp__cmp tbody th{font:500 15px/1.35 var(--display);color:var(--ink)}
+.x-sp__cmp .is-us{color:var(--ink);font-weight:600}
+.x-sp__cmp thead .is-us{color:var(--ink)}
+.x-sp__src{color:var(--slate-d);font-size:12px;margin:14px 0 clamp(28px,4vw,40px);text-transform:none;letter-spacing:.02em}
+.x-sp__pull{font:500 clamp(1.25rem,2.2vw,1.9rem)/1.3 var(--display);letter-spacing:-.02em;margin:0;max-width:34ch}
+/* g. stack */
+.x-sp__stack{margin:0;color:var(--ink);overflow-wrap:anywhere;line-height:1.8}
 @media(max-width:900px){
-  .x-sp{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
-  .x-sp__head,.x-sp__body,.x-sp__fig{grid-column:1;grid-row:auto}
-  .x-sp__fig{max-width:300px;margin:clamp(40px,8vw,56px) auto 0}
-  .x-sp__stats{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .x-sp__stats div:nth-child(2){border-right:0}
-  .x-sp__stats div:nth-child(3){padding-left:0}
-  .x-sp__stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .x-sp{gap:56px}
+  .x-sp>*{order:3}
+  .x-sp>.x-sp__hd{order:1}
+  .x-sp>.x-sp__vis{order:2}
+  .x-sp__g{grid-template-columns:minmax(0,1fr);gap:24px}
+  .x-sp__l,.x-sp__r,.x-sp__id,.x-sp__acts{grid-column:1/-1}
+  .x-sp__acts{justify-self:start;justify-content:flex-start}
+  .x-sp__icon{width:56px;height:56px}
+  .x-sp__vis{gap:40px}
+  .x-sp__fig{max-width:300px;margin:0 auto}
+  .x-sp__stages{grid-template-columns:minmax(0,1fr);gap:16px}
+  .x-sp__stages li{padding:0 0 0 26px}
+  .x-sp__stages li::before{top:3px}
+  .x-sp__stages li::after{left:4px;right:auto;top:12px;bottom:-19px;width:1px;height:auto}
 }
-@media(max-width:400px){.x-sp__stats dt{font-size:1.6rem}.x-sp__stats div{padding-right:10px}.x-sp__stats div+div{padding-left:10px}.x-sp__stats div:nth-child(3){padding-left:0}}
+@media(max-width:400px){.x-sp__id{gap:16px}.x-sp__stats dt{font-size:1.7rem}.x-sp__stats div{padding-right:10px}.x-sp__stats div:nth-child(even){padding-left:12px}}
 /* current focus */
 .focus{background:var(--cobalt);color:var(--white);padding:clamp(88px,12vw,180px) 0}
 .focus .idx{color:var(--white)}
@@ -366,7 +404,7 @@ p{margin:0 0 1em}
 .fq__q[aria-expanded="true"] .n{color:var(--cobalt)}
 .fq__a{padding:0 40px 28px calc(clamp(48px,8vw,120px) + 12px);color:var(--graph);max-width:calc(62ch + 132px)}
 .fq__a p{margin:0}
-.fq__a a{display:inline-flex;align-items:center;min-height:44px;color:var(--ink);text-decoration-color:var(--cobalt);text-underline-offset:3px}
+.fq__a a{display:inline-flex;align-items:center;min-height:48px;color:var(--ink);text-decoration-color:var(--cobalt);text-underline-offset:3px}
 .fq__a a:hover{color:var(--cobalt)}
 @media(max-width:600px){.fq__top{flex-direction:column;align-items:flex-start}.fq__q{grid-template-columns:36px minmax(0,1fr) 20px}.fq__a{padding:0 0 24px 48px}}
 /* contact + footer */
@@ -695,7 +733,7 @@ p{margin:0 0 1em}
     <div class="wk">
       <div class="rv">
         <ul class="wk__rows" aria-label="Project index">
-          <li class="x-wk__live"><span class="c">W—01</span><span class="x-wk__nm"><a href="#sp-h">SPARK</a><small class="mono">Android app · v1.0</small></span><span class="s mono">Live</span><a class="tlink x-wk__go" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit ↗</a></li>
+          <li class="x-wk__live"><span class="c">W—01</span><span class="x-wk__nm"><a href="#sp-h"><img src="spark-icon.webp" width="32" height="32" decoding="async" alt="" />SPARK</a><small class="mono">Android app · v1.0</small></span><span class="s mono">Live</span><a class="tlink x-wk__go" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit ↗</a></li>
           <li><span class="c">W—02</span><span class="s mono">In development</span></li>
           <li><span class="c">W—03</span><span class="s mono">Coming soon</span></li>
         </ul>
@@ -730,44 +768,96 @@ p{margin:0 0 1em}
       </figure>
     </div>
     <article class="x-sp" aria-labelledby="sp-h">
-      <div class="x-sp__head rv">
-        <p class="x-sp__kick mono"><span>W—01 / SPARK — Case notes</span></p>
-        <h3 class="x-sp__title" id="sp-h">SPARK</h3>
-        <p class="x-sp__sub">Never lose a great <em class="s">idea.</em></p>
-        <p class="x-sp__sum">A local-first Android app that captures ideas by text or voice, keeps them private on the device, and brings the forgotten ones back when they matter.</p>
-      </div>
-      <figure class="x-sp__fig rv">
-        <div class="x-sp__frame">
-          <img src="spark-home.webp" width="466" height="900" loading="lazy" decoding="async" alt="SPARK Android home screen: a “What’s on your mind?” prompt with a Write an idea field, a Speak button for voice capture, and a New spark button, with the footer reading Local-only · No account." />
+      <header class="x-sp__g x-sp__hd rv">
+        <p class="x-sp__kick mono"><span>W—01 / SPARK — Case study</span></p>
+        <div class="x-sp__id">
+          <img class="x-sp__icon" src="spark-icon.webp" width="72" height="72" decoding="async" alt="SPARK app icon" />
+          <div>
+            <h3 class="x-sp__title" id="sp-h">SPARK</h3>
+            <p class="x-sp__tag">Never lose a great <em class="s">idea.</em></p>
+            <p class="x-sp__meta mono">Android · v1.0 · ≈5.2 MB · No account · Live</p>
+          </div>
         </div>
-        <figcaption>Real SPARK home screen · v1.0</figcaption>
-      </figure>
-      <div class="x-sp__body">
-        <p class="x-sp__role rv">Role · Product Design · Android Development · Launch Site</p>
-        <dl class="x-sp__stats rv" aria-label="SPARK at a glance">
+        <div class="x-sp__acts">
+          <a class="btn" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit SPARK ↗</a>
+          <a class="tlink" href="https://spark-download.vercel.app/SPARK.apk" target="_blank" rel="noopener">Download APK ↗</a>
+        </div>
+      </header>
+
+      <div class="x-sp__g rv">
+        <div class="x-sp__l">
+          <dl class="x-sp__facts" aria-label="Project facts">
+            <div><dt>Role</dt><dd>Product design, Android development, launch site</dd></div>
+            <div><dt>Platform</dt><dd>Android (APK)</dd></div>
+            <div><dt>Storage</dt><dd>Local SQLite, on device</dd></div>
+            <div><dt>Status</dt><dd>Live, v1.0 (2026)</dd></div>
+          </dl>
+        </div>
+        <div class="x-sp__r">
+          <p class="x-sp__lbl mono">The brief</p>
+          <p class="x-sp__brief">Ideas arrive at inconvenient moments — on a walk, mid-conversation, half-asleep. Most note apps ask for an account, a sync plan and a lot of storage before you can keep one. SPARK is the opposite: open it, speak or type, and the thought is safe on your phone. Later, it quietly brings the forgotten ones back.</p>
+        </div>
+      </div>
+
+      <div class="x-sp__g x-sp__vis rv">
+        <figure class="x-sp__l x-sp__fig">
+          <div class="x-sp__frame">
+            <img src="spark-home.webp" width="699" height="1350" loading="lazy" decoding="async" alt="SPARK Android home screen: a “What’s on your mind?” prompt with a Write an idea field, a Speak button for voice capture, and a New spark button, with the footer reading Local-only · No account." />
+          </div>
+          <figcaption>Real SPARK home screen · v1.0</figcaption>
+        </figure>
+        <dl class="x-sp__r x-sp__stats" aria-label="SPARK at a glance">
           <div><dt>≈5.2 MB</dt><dd>Android download</dd></div>
           <div><dt>100%</dt><dd>Local-first storage</dd></div>
           <div><dt>0</dt><dd>Accounts required</dd></div>
-          <div><dt>3</dt><dd>Export formats (JSON, Markdown, ZIP)</dd></div>
+          <div><dt>3</dt><dd>Export formats</dd></div>
         </dl>
-        <div class="rv">
-          <p class="x-sp__lbl mono" id="sp-caps">What it does</p>
-          <ol class="x-sp__caps" aria-labelledby="sp-caps">
-            <li><span class="n mono">01</span><h4>Voice sparks</h4><p>Record voice notes with selectable quality and optional on-device transcription into searchable text.</p></li>
-            <li><span class="n mono">02</span><h4>Resurfacing</h4><p>Old and favourite ideas return when they deserve another look: keep or archive.</p></li>
-            <li><span class="n mono">03</span><h4>Four clear stages</h4><p>Active → Developing → Built → Archived, so every thought has a place.</p></li>
-            <li><span class="n mono">04</span><h4>Portable vault</h4><p>Export as JSON or Markdown, or back up everything with audio as a ZIP.</p></li>
-          </ol>
-          <p class="x-sp__note"><strong>Private by default.</strong> Ideas live in a local SQLite database on the device; voice recordings never leave it.</p>
-        </div>
-        <div class="rv">
-          <p class="x-sp__pull"><span>The difference ·</span> Free, no account, fully offline, local voice transcription and idea resurfacing — in about 5.2 MB.</p>
-          <p class="x-sp__tags mono">Android / SQLite / On-device speech-to-text / Local-first</p>
-          <div class="x-sp__acts">
-            <a class="btn" href="https://spark-download.vercel.app/" target="_blank" rel="noopener">Visit SPARK ↗</a>
-            <a class="tlink" href="https://spark-download.vercel.app/SPARK.apk" target="_blank" rel="noopener">Download APK ↗</a>
+      </div>
+
+      <div class="x-sp__g rv">
+        <p class="x-sp__l x-sp__lbl mono" id="sp-caps">What it does</p>
+        <ol class="x-sp__r x-sp__caps" aria-labelledby="sp-caps">
+          <li><span class="n mono">01</span><h4>Voice sparks</h4><p>Record a voice note, pick the recording quality, and optionally turn speech into searchable text on the device. Audio-only mode skips transcription entirely.</p></li>
+          <li><span class="n mono">02</span><h4>Resurfacing</h4><p>Old and favourite sparks return when they deserve another look (“Still relevant?”), so you can keep them close or archive them quietly.</p></li>
+          <li><span class="n mono">03</span><h4>Four clear stages</h4><p>Every idea moves through Active → Developing → Built → Archived.</p>
+            <ol class="x-sp__stages" aria-label="Idea stages, in order">
+              <li>Active</li><li>Developing</li><li>Built</li><li>Archived</li>
+            </ol>
+          </li>
+          <li><span class="n mono">04</span><h4>Portable vault</h4><p>Export as JSON or Markdown, or make a full ZIP backup with audio. A storage indicator shows what lives on the device.</p></li>
+        </ol>
+      </div>
+
+      <div class="x-sp__g rv">
+        <p class="x-sp__l x-sp__lbl mono">Private by default</p>
+        <p class="x-sp__r x-sp__priv">Ideas live in a SQLite database on your phone, and voice recordings stay there too. No account, no cloud, nothing to sign up for.</p>
+      </div>
+
+      <div class="x-sp__g rv">
+        <p class="x-sp__l x-sp__lbl mono" id="sp-cmp">The difference</p>
+        <div class="x-sp__r">
+          <div class="x-sp__cmpw" role="region" aria-labelledby="sp-cmp" tabindex="0">
+            <table class="x-sp__cmp">
+              <thead>
+                <tr><th scope="col">Feature</th><th scope="col" class="is-us">SPARK</th><th scope="col">Google Keep</th><th scope="col">Notion</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">No account</th><td class="is-us"><span role="img" aria-label="Yes">✓</span></td><td><span role="img" aria-label="No">×</span></td><td><span role="img" aria-label="No">×</span></td></tr>
+                <tr><th scope="row">Fully offline</th><td class="is-us">100%</td><td>Partial</td><td>Limited</td></tr>
+                <tr><th scope="row">Data on device</th><td class="is-us"><span role="img" aria-label="Yes">✓</span></td><td>Cloud sync</td><td>Cloud</td></tr>
+                <tr><th scope="row">Idea resurfacing</th><td class="is-us"><span role="img" aria-label="Yes">✓</span></td><td><span role="img" aria-label="No">×</span></td><td><span role="img" aria-label="No">×</span></td></tr>
+                <tr><th scope="row">App footprint</th><td class="is-us">≈5.2 MB</td><td>Medium</td><td>100 MB+</td></tr>
+              </tbody>
+            </table>
           </div>
+          <p class="x-sp__src mono">Comparison snapshot from the SPARK launch page, Oct 2026.</p>
+          <p class="x-sp__pull">Free, no account, fully offline, local voice transcription and idea resurfacing — in about <em class="s">5.2 MB.</em></p>
         </div>
+      </div>
+
+      <div class="x-sp__g rv">
+        <p class="x-sp__l x-sp__lbl mono">Stack</p>
+        <p class="x-sp__r x-sp__stack mono">Android / SQLite / On-device speech-to-text / Local-first / Vercel (launch site)</p>
       </div>
     </article>
     <div class="x-os rv">
