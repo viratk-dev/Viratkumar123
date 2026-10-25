@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sonvel — studio voice, on your phone</title>
+<meta name="description" content="Clean up voice recordings in your browser. Remove noise, filler words and long pauses. Free, unlimited and on-device.">
+<meta name="theme-color" content="#F6F5F1" id="theme-color">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="icons/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<script>
+  // First visit is always light; a saved choice wins after that.
+  try { if (localStorage.getItem('sonvel.theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (e) {}
+  if (document.documentElement.dataset.theme === 'dark') document.querySelector('#theme-color')?.setAttribute('content', '#0F0F0E');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="i-upload" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V4"/><path d="m7 9 5-5 5 5"/><path d="M5 15v3a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-3"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 12c2.2-6 4.3-6 6 0s3.8 6 6 0 3.8-6 6 0"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></symbol>
+    <symbol id="i-stack" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="5" rx="2"/><rect x="4" y="12" width="16" height="5" rx="2"/><path d="M7 21h10"/></symbol>
+    <symbol id="i-sliders" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2"/><circle cx="10" cy="17" r="2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1.5"/><rect x="14" y="5" width="4" height="14" rx="1.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4v11"/><path d="m7 10 5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-share" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="m8 7 4-4 4 4"/><path d="M6 11H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-1"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></symbol>
+    <symbol id="i-trim" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 3v18M18 3v18M6 12h12"/></symbol>
+    <symbol id="i-undo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L19 7"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></symbol>
+    <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="13" height="12" rx="3"/><path d="m16 10 5-3v10l-5-3"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 11h4M7 15h10M14 11h3"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+<div class="app">
+  <header class="topbar" id="topbar">
+    <a class="brand" href="./" aria-label="Sonvel home">
+      <img class="logo-light" src="icons/logo.svg" alt="Sonvel" width="99" height="28">
+      <img class="logo-dark" src="icons/logo-dark.svg" alt="Sonvel" width="99" height="28">
+    </a>
+    <nav class="tabbar" id="tabbar" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" data-tab="clean" aria-selected="true"><svg><use href="#i-wave"/></svg>Clean</button>
+      <button class="tab" role="tab" data-tab="record" aria-selected="false"><svg><use href="#i-mic"/></svg>Record</button>
+      <button class="tab" role="tab" data-tab="batch" aria-selected="false"><svg><use href="#i-stack"/></svg>Batch</button>
+      <button class="tab" role="tab" data-tab="settings" aria-selected="false"><svg><use href="#i-sliders"/></svg>Settings</button>
+    </nav>
+    <div class="top-actions">
+      <button class="icon-btn" id="theme-btn" aria-label="Switch to dark mode"><svg><use href="#i-moon"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ============================================================ CLEAN -->
+    <section class="screen active" data-screen="clean" data-state="empty" aria-label="Clean">
+      <div class="clean-grid">
+        <div class="stack" id="clean-main">
+
+          <!-- empty -->
+          <div class="stack" data-show="empty">
+            <div class="hero">
+              <span class="kicker">FREE · UNLIMITED · ON-DEVICE</span>
+              <h1>Studio voice.<br><span class="accent">One tap.</span></h1>
+              <p class="lead">Remove noise, clicks, filler words and long pauses. Nothing is uploaded. It all happens on your phone.</p>
+            </div>
+            <div style="position:relative">
+              <button class="drop" id="drop" type="button" aria-describedby="drop-formats">
+                <span class="drop-icon"><svg><use href="#i-upload"/></svg></span>
+                <span class="drop-title">Choose audio or video</span>
+                <span class="label" id="drop-formats">MP3 · WAV · M4A · MP4</span>
+              </button>
+              
+            </div>
+            <div class="row" style="justify-content:center">
+              <button class="or-record" data-goto="record"><svg><use href="#i-mic"/></svg>Or record your voice</button>
+            </div>
+            <div class="steps-mini" aria-hidden="true">
+              <div><b>01</b><span>Add a file</span></div>
+              <div><b>02</b><span>Tap Magic Clean</span></div>
+              <div><b>03</b><span>Export</span></div>
+            </div>
+          </div>
+
+          <!-- loaded -->
+          <div class="stack hidden" data-show="loaded">
+            <div class="hero" style="padding-bottom:0">
+              <span class="kicker">Ready to clean</span>
+              <h2>Your recording</h2>
+            </div>
+            <div class="card">
+              <div class="spread">
+                <div class="file-meta">
+                  <span class="file-icon"><svg id="file-kind"><use href="#i-file"/></svg></span>
+                  <div class="file-text"><span class="file-name" id="file-name">—</span><span class="label" id="file-info">—</span></div>
+                </div>
+                <button class="icon-btn ghost" id="file-remove" aria-label="Remove file"><svg><use href="#i-x"/></svg></button>
+              </div>
+              <div class="wave-wrap"><canvas class="wave" id="wave-in" aria-label="Waveform of your recording"></canvas></div>
+              <div class="transport" style="margin-top:12px">
+                <button class="play" id="in-play" aria-label="Play original"><svg><use href="#i-play"/></svg></button>
+                <div class="time-stack"><span class="label">Original</span><span class="time"><b id="in-pos">0:00</b> / <span id="in-dur">0:00</span></span></div>
+                </div>
+              <div class="note hidden" id="video-note" style="margin-top:14px"><svg><use href="#i-video"/></svg><div><b>Video sync is on.</b> Cuts, speed and filler removal are off so the voice stays in sync with your video. <button class="btn ghost sm" id="video-sync-off" style="padding:0;min-height:32px">Allow cuts (audio only)</button></div></div>
+            </div>
+            <button class="btn primary xl block" id="magic-btn"><svg><use href="#i-wave"/></svg>Magic Clean</button>
+            <button class="btn block only-mobile" id="customize-btn"><svg><use href="#i-sliders"/></svg>Customize steps</button>
+          </div>
+
+          <!-- processing -->
+          <div class="stack hidden" data-show="processing" aria-live="polite">
+            <div class="hero" style="padding-bottom:0">
+              <span class="kicker" id="proc-kicker">Cleaning · 0%</span>
+              <div class="proc-title" id="proc-title">Getting ready…</div>
+            </div>
+            <div class="card stack">
+              <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" id="proc-bar"><i></i></div>
+              <canvas class="wave" id="wave-proc" aria-hidden="true"></canvas>
+              <ul class="steps" id="proc-steps"></ul>
+            </div>
+            <button class="btn ghost block" id="proc-cancel">Cancel</button>
+          </div>
+
+          <!-- result -->
+          <div class="stack hidden" data-show="result">
+            <div class="hero" style="padding-bottom:0">
+              <span class="kicker">Done · <span id="res-file">file</span></span>
+              <h2>Sounds better.</h2>
+            </div>
+            <div class="card">
+              <div class="spread" style="margin-bottom:12px">
+                <div class="seg" id="ab" role="group" aria-label="Compare before and after">
+                  <span class="thumb"></span>
+                  <button aria-pressed="false" data-ab="before">Before</button>
+                  <button aria-pressed="true" data-ab="after">After</button>
+                </div>
+                <span class="label only-desktop">Tap to switch while playing</span>
+              </div>
+              <div class="wave-wrap"><canvas class="wave tall" id="wave-out" aria-label="Waveform of the cleaned audio. Drag to seek."></canvas></div>
+                            <div class="spread" style="margin-top:12px;flex-wrap:wrap;row-gap:12px">
+                <div class="transport">
+                  <button class="play" id="out-play" aria-label="Play"><svg><use href="#i-play"/></svg></button>
+                  <div class="time-stack"><span class="label" id="ab-label">Cleaned</span><span class="time" id="out-time"><b>0:00</b> / 0:00</span></div>
+                </div>
+                <div class="tools" id="tools">
+                  <button class="tool" data-mode="trim" aria-pressed="false"><svg><use href="#i-trim"/></svg>Trim</button>
+                  <button class="tool" data-mode="cut" aria-pressed="false"><svg><use href="#i-scissors"/></svg>Select</button>
+                  <button class="tool hidden" id="cut-apply"><svg><use href="#i-scissors"/></svg>Cut</button>
+                  <button class="tool hidden" id="undo-btn" aria-label="Undo"><svg><use href="#i-undo"/></svg>Undo</button>
+                </div>
+              </div>
+              <p class="label hidden" id="mode-hint" style="margin-top:10px"></p>
+            </div>
+
+            <div class="stats" id="stats">
+              <div class="stat"><span class="label">Time saved</span><span class="num" id="st-saved">0<small>s</small></span></div>
+              <div class="stat"><span class="label">Fillers cut</span><span class="num" id="st-fillers">0</span></div>
+              <div class="stat"><span class="label">Loudness</span><span class="num key" id="st-lufs">-14<small>LUFS</small></span></div>
+              <div class="stat"><span class="label">Length</span><span class="num" id="st-len">0:00</span></div>
+            </div>
+
+            <button class="btn primary xl block" id="export-btn"><svg><use href="#i-download"/></svg>Export</button>
+
+            <div class="card" id="filler-card">
+              <div class="card-head">
+                <div class="t" style="display:flex;flex-direction:column;gap:4px"><h3>Filler words</h3><span class="label" id="filler-sub">um · uh · hmm · matlab · toh</span></div>
+              </div>
+              <div id="filler-empty" class="stack">
+                <p class="lead" style="max-width:none;font-size:15px">Find “um”, “uh” and long hesitations with on-device speech AI. It downloads once (about 65 MB), then works offline.</p>
+                <button class="btn block" id="find-fillers"><svg><use href="#i-text"/></svg>Find filler words</button>
+              </div>
+              <div id="filler-progress" class="stack hidden">
+                <div class="spread"><span class="mono" id="asr-label">Downloading speech AI…</span><span class="mono" id="asr-pct">0%</span></div>
+                <div class="bar"><i id="asr-bar"></i></div>
+              </div>
+              <div id="filler-list-wrap" class="stack hidden">
+                <ul class="fillers" id="filler-list"></ul>
+                <button class="btn ink block" id="apply-fillers">Remove selected</button>
+              </div>
+            </div>
+
+            <div class="btn-row">
+              <button class="btn only-mobile" id="tweak-btn"><svg><use href="#i-sliders"/></svg>Adjust</button>
+              <button class="btn" id="new-btn">New file</button>
+            </div>
+          </div>
+        </div>
+
+        <aside class="side-panel card" id="side-panel" aria-label="Cleaning steps"></aside>
+      </div>
+    </section>
+
+    <!-- ============================================================ RECORD -->
+    <section class="screen" data-screen="record" aria-label="Record">
+      <div class="narrow stack">
+        <div class="hero" style="padding-bottom:0">
+          <span class="kicker">Record</span>
+          <h2>Talk. We’ll clean it live.</h2>
+        </div>
+        <div class="card rec-card" id="rec-card">
+          <span class="rec-status label"><i></i><span id="rec-status">Ready</span></span>
+          <div class="rec-time" id="rec-time" aria-live="off">00:00</div>
+          <canvas class="meter" id="meter" aria-hidden="true"></canvas>
+          <div class="rec-controls">
+            <div class="side"><button class="icon-btn" id="rec-discard" aria-label="Discard recording" disabled><svg><use href="#i-x"/></svg></button></div>
+            <button class="rec-btn" id="rec-btn" aria-label="Start recording"><i></i></button>
+            <div class="side"><button class="icon-btn" id="rec-pause" aria-label="Pause" disabled><svg><use href="#i-pause"/></svg></button></div>
+          </div>
+        </div>
+        <div class="card flat">
+          <div class="setting-head">
+            <div class="t"><b>Live noise cancel</b><span>Removes background noise while you record (RNNoise).</span></div>
+            <label class="switch"><input type="checkbox" id="live-nc" checked aria-label="Live noise cancel"></label>
+          </div>
+        </div>
+        <div class="stack hidden" id="rec-done">
+          <button class="btn primary xl block" id="rec-use"><svg><use href="#i-wave"/></svg>Clean this recording</button>
+          <button class="btn block" id="rec-save"><svg><use href="#i-download"/></svg>Save raw WAV</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ BATCH -->
+    <section class="screen" data-screen="batch" aria-label="Batch">
+      <div class="narrow stack">
+        <div class="hero" style="padding-bottom:0">
+          <span class="kicker">Batch</span>
+          <h2>Clean many files at once.</h2>
+        </div>
+        <div class="card" id="batch-card">
+          <div class="empty" id="batch-empty">
+            <span class="empty-icon"><svg><use href="#i-stack"/></svg></span>
+            <h3>No files yet</h3>
+            <p class="lead" style="text-align:center">Every file gets your current settings. Each one downloads when it’s done.</p>
+            <button class="btn primary" id="batch-pick"><svg><use href="#i-upload"/></svg>Choose files</button>
+          </div>
+          <ul class="batch-list hidden" id="batch-list"></ul>
+        </div>
+        <div class="card flat hidden" id="batch-opts">
+          <div class="setting-head">
+            <div class="t"><b>Also remove filler words</b><span>Slower. Uses the speech AI on each file.</span></div>
+            <label class="switch"><input type="checkbox" id="batch-fillers" aria-label="Also remove filler words"></label>
+          </div>
+        </div>
+        <div class="btn-row hidden" id="batch-actions">
+          <button class="btn" id="batch-add"><svg><use href="#i-upload"/></svg>Add</button>
+          <button class="btn primary" id="batch-run">Clean all</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================ SETTINGS -->
+    <section class="screen" data-screen="settings" aria-label="Settings">
+      <div class="narrow stack">
+        <div class="hero" style="padding-bottom:0">
+          <span class="kicker">Settings</span>
+          <h2>Make it yours.</h2>
+        </div>
+        <div class="card">
+          <div class="setting">
+            <div class="setting-head"><div class="t"><b>Appearance</b><span>Light is the default.</span></div></div>
+            <div class="seg wide" id="theme-seg" role="group" aria-label="Theme"><span class="thumb"></span><button data-theme-set="light" aria-pressed="true">Light</button><button data-theme-set="dark" aria-pressed="false">Dark</button></div>
+          </div>
+          <div class="setting">
+            <div class="setting-head"><div class="t"><b>Speech AI model</b><span>Used for filler words and subtitles. Downloads once.</span></div></div>
+            <div class="seg wide" id="model-seg" role="group" aria-label="Speech model"><span class="thumb"></span><button data-model="onnx-community/whisper-tiny_timestamped" aria-pressed="true">Fast · 65 MB</button><button data-model="onnx-community/whisper-base_timestamped" aria-pressed="false">Better · 140 MB</button></div>
+          </div>
+          <div class="setting">
+            <div class="setting-head"><div class="t"><b>Language</b><span>For filler words and subtitles.</span></div></div>
+            <div class="seg wide" id="lang-seg" role="group" aria-label="Language"><span class="thumb"></span><button data-lang="" aria-pressed="true">Auto</button><button data-lang="english" aria-pressed="false">English</button><button data-lang="hindi" aria-pressed="false">Hindi</button></div>
+          </div>
+          <div class="setting">
+            <div class="setting-head"><div class="t"><b>Default export</b><span>Used by Batch and preselected in Export.</span></div></div>
+            <div class="chips" id="fmt-default"></div>
+          </div>
+          <div class="setting">
+            <div class="setting-head wrap"><div class="t"><b>Storage</b><span id="storage-info">Models and app files are cached for offline use.</span></div><button class="btn sm" id="clear-cache">Clear AI cache</button></div>
+          </div>
+        </div>
+        <div class="card flat about">
+          <span class="kicker">About</span>
+          <p style="margin-top:8px">Sonvel runs entirely in your browser. Audio never leaves your device. Built with RNNoise, Whisper (transformers.js), SoundTouch, lamejs and ffmpeg.wasm.</p>
+          <p class="mono" style="margin-top:8px" id="version">v1.0.0</p>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- sheets -->
+<div class="scrim" id="scrim"></div>
+<section class="sheet" id="settings-sheet" role="dialog" aria-modal="true" aria-labelledby="settings-sheet-title">
+  <div class="sheet-grip"></div>
+  <div class="sheet-head"><h3 id="settings-sheet-title">Cleaning steps</h3><button class="icon-btn ghost" data-close aria-label="Close"><svg><use href="#i-x"/></svg></button></div>
+  <div class="sheet-body" id="sheet-panel-host"></div>
+  <div class="sheet-foot"><button class="btn primary block" id="sheet-apply">Apply</button></div>
+</section>
+
+<section class="sheet" id="export-sheet" role="dialog" aria-modal="true" aria-labelledby="export-title">
+  <div class="sheet-grip"></div>
+  <div class="sheet-head"><h3 id="export-title">Export</h3><button class="icon-btn ghost" data-close aria-label="Close"><svg><use href="#i-x"/></svg></button></div>
+  <div class="sheet-body stack" style="gap:18px;padding-top:16px">
+    <div class="stats compact" style="grid-template-columns:repeat(3,1fr)">
+      <div class="stat"><span class="label">Length</span><span class="num" id="ex-len">0:00</span></div>
+      <div class="stat"><span class="label">LUFS</span><span class="num key" id="ex-lufs">—</span></div>
+      <div class="stat"><span class="label">Peak dBTP</span><span class="num" id="ex-tp">—</span></div>
+    </div>
+    <div class="stack" style="gap:10px">
+      <span class="label">Format</span>
+      <div class="seg wide" id="ex-format" role="group" aria-label="Format"><span class="thumb"></span><button data-fmt="mp3" aria-pressed="true">MP3</button><button data-fmt="wav" aria-pressed="false">WAV</button></div>
+      <div class="chips" id="ex-quality"></div>
+    </div>
+    <div class="note"><svg><use href="#i-file"/></svg><div><b id="ex-name">file-clean.mp3</b><br><span id="ex-size">~0 MB</span></div></div>
+    <div class="bar hidden" id="ex-bar"><i></i></div>
+    <div class="btn-row">
+      <button class="btn primary" id="ex-download"><svg><use href="#i-download"/></svg>Download</button>
+      <button class="btn hidden" id="ex-share" aria-label="Share"><svg><use href="#i-share"/></svg>Share</button>
+    </div>
+    <div class="stack" style="gap:10px;border-top:1px solid var(--line);padding-top:16px">
+      <span class="label">More</span>
+      <button class="btn block" id="ex-srt"><svg><use href="#i-text"/></svg>Subtitles (.srt)</button>
+      <button class="btn block hidden" id="ex-video"><svg><use href="#i-video"/></svg>Video with clean audio</button>
+      <p class="label hidden" id="ex-video-note"></p>
+    </div>
+  </div>
+</section>
+
+<div class="coach hidden" id="coach" role="dialog" aria-label="Tip">
+  <div style="flex:1;min-width:0"><span class="kicker">Start here</span><p>Pick a voice recording or a video, then tap <b>Magic Clean</b>. Your file never leaves this device.</p></div>
+  <button class="btn sm" id="coach-ok">Got it</button>
+</div>
+<input type="file" id="file-input" accept="audio/*,video/mp4,video/webm,.wav,.mp3,.m4a,.ogg,.webm,.mp4" hidden>
+<input type="file" id="batch-input" accept="audio/*,video/mp4,video/webm,.wav,.mp3,.m4a,.ogg,.webm,.mp4" multiple hidden>
+<input type="file" id="music-input" accept="audio/*" hidden>
+<div class="toast-host" id="toasts" aria-live="polite"></div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
